@@ -1,0 +1,1986 @@
+{
+  "foods": [
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "High in healthy fats essential for brain development. Your baby's brain is about 60% fat!",
+      "video_links": [
+        {
+          "title": "How to Serve Avocado to Babies",
+          "url": "https://solidstarts.com/foods/avocado/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thick wedges",
+          "preparation": "Cut into quarters lengthwise, remove pit and skin",
+          "serving_tip": "Roll in hemp seeds, crushed cheerios, or infant cereal for grip—otherwise too slippery",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Cubes or thin slices",
+          "preparation": "Dice into chickpea-sized pieces or slice thin",
+          "serving_tip": "Great mashed on toast strips too",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "banana",
+      "name": "Banana",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "High in potassium and B6, essential for nerve function and brain development.",
+      "video_links": [
+        {
+          "title": "How to Serve Banana to Babies",
+          "url": "https://solidstarts.com/foods/banana/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Spears with partial peel",
+          "preparation": "Cut in half crosswise, leave bottom half of peel on as a 'handle'",
+          "serving_tip": "The peel gives grip and prevents baby from stuffing whole piece in mouth",
+          "safety_note": "Very ripe banana can be gummy—watch for gagging"
+        },
+        "phase_2": {
+          "shape": "Coins or small pieces",
+          "preparation": "Slice into rounds, then halve if large",
+          "serving_tip": "Roll in hemp seeds if too slippery",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "The mango pit is a perfect resistive teether—baby can gnaw safely while getting nutrients!",
+      "video_links": [
+        {
+          "title": "How to Serve Mango to Babies",
+          "url": "https://solidstarts.com/foods/mango/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Spears or pit with flesh",
+          "preparation": "Cut cheeks off pit, slice into long strips. Or offer the pit itself to gnaw on.",
+          "serving_tip": "Leave skin on the end as a handle, or score flesh in grid pattern while still on skin",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Cubes",
+          "preparation": "Dice into small pieces",
+          "serving_tip": "Pairs well with yogurt",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "strawberry",
+      "name": "Strawberry",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "vitamin_c_rich": true,
+      "fun_fact": "Vitamin C from strawberries helps your baby absorb iron 2-3x better when eaten together!",
+      "video_links": [
+        {
+          "title": "How to Serve Strawberries to Babies",
+          "url": "https://solidstarts.com/foods/strawberry/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Whole large strawberries or halved",
+          "preparation": "Remove stem. Serve whole if very large (golf ball+), halve if medium",
+          "serving_tip": "Great Vitamin C source—pair with iron-rich foods to boost absorption",
+          "safety_note": "Quarter lengthwise if strawberry is small or firm"
+        },
+        "phase_2": {
+          "shape": "Quartered or diced",
+          "preparation": "Quarter lengthwise, then chop smaller",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "blueberry",
+      "name": "Blueberry",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "high",
+      "intro_age_months": 6,
+      "fun_fact": "Rich in antioxidants called anthocyanins that support brain development and memory.",
+      "video_links": [
+        {
+          "title": "How to Serve Blueberries to Babies",
+          "url": "https://solidstarts.com/foods/blueberry/",
+          "source": "Solid Starts",
+          "type": "prep"
+        },
+        {
+          "title": "Why Whole Blueberries Are Dangerous",
+          "url": "https://solidstarts.com/foods/blueberry/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Flattened or smashed",
+          "preparation": "Press each berry flat with fork or fingers until skin breaks",
+          "serving_tip": "Can also mash into oatmeal or yogurt",
+          "safety_note": "NEVER serve whole—perfect choking shape. Must be flattened or quartered."
+        },
+        "phase_2": {
+          "shape": "Flattened or quartered",
+          "preparation": "Flatten with fork or cut in half/quarters",
+          "serving_tip": null,
+          "safety_note": "Still flatten or quarter until confident with chewing"
+        }
+      }
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Peaches contain natural fiber that supports healthy digestion as baby transitions to solids.",
+      "video_links": [
+        {
+          "title": "How to Serve Peaches to Babies",
+          "url": "https://solidstarts.com/foods/peach/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Wedges with skin",
+          "preparation": "Cut into wedges, leave skin on (provides grip and fiber)",
+          "serving_tip": "Choose ripe peaches that yield to gentle pressure",
+          "safety_note": "If skin is tough, lightly score it or remove"
+        },
+        "phase_2": {
+          "shape": "Diced",
+          "preparation": "Remove skin if desired, dice into small pieces",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "watermelon",
+      "name": "Watermelon",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Over 90% water, making it great for hydration on hot days when starting solids!",
+      "video_links": [
+        {
+          "title": "How to Serve Watermelon to Babies",
+          "url": "https://solidstarts.com/foods/watermelon/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large wedge or rectangular stick",
+          "preparation": "Cut into thick sticks about 2 fingers wide. Remove all visible seeds.",
+          "serving_tip": "Leave rind on as a handle—baby gnaws the flesh",
+          "safety_note": "Remove seeds thoroughly—choking hazard"
+        },
+        "phase_2": {
+          "shape": "Cubes",
+          "preparation": "Cut into bite-sized cubes, remove seeds and rind",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "high",
+      "intro_age_months": 6,
+      "fun_fact": "Contains pectin, a prebiotic fiber that feeds the good bacteria in baby's developing gut!",
+      "video_links": [
+        {
+          "title": "How to Serve Apples to Babies Safely",
+          "url": "https://solidstarts.com/foods/apple/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Cooked wedges or grated raw",
+          "preparation": "Steam or roast until very soft. OR grate raw apple finely.",
+          "serving_tip": "Thin slices of raw apple can work if paper-thin and baby can gum them",
+          "safety_note": "RAW APPLE CHUNKS ARE HIGH CHOKING RISK. Must be cooked soft or grated until 2+ years."
+        },
+        "phase_2": {
+          "shape": "Soft cooked pieces or shredded raw",
+          "preparation": "Bake/steam and dice, or continue grating raw",
+          "serving_tip": "Mix grated apple into oatmeal",
+          "safety_note": "Raw apple pieces remain high risk until well-established chewing"
+        }
+      }
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "medium",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "vitamin_c_rich": true,
+      "fun_fact": "The stem makes a perfect natural handle for baby's palmar grasp—one of the best first BLW foods!",
+      "video_links": [
+        {
+          "title": "How to Serve Broccoli to Babies",
+          "url": "https://solidstarts.com/foods/broccoli/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large florets with stem handle",
+          "preparation": "Steam until fork-tender (about 8-10 min). Leave long stem attached.",
+          "serving_tip": "The stem is a natural handle—baby holds stem, eats floret. One of the best first BLW foods.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Smaller florets or chopped",
+          "preparation": "Steam and cut into smaller pieces",
+          "serving_tip": "Great tossed in olive oil and parmesan",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "sweet_potato",
+      "name": "Sweet Potato",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "One of the richest sources of beta-carotene, which converts to Vitamin A for healthy eyes and immune function!",
+      "video_links": [
+        {
+          "title": "How to Serve Sweet Potato to Babies",
+          "url": "https://solidstarts.com/foods/sweet-potato/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Wedges or thick sticks",
+          "preparation": "Cut into wedges (with skin on for grip), roast at 400°F until soft (~25 min)",
+          "serving_tip": "Leave skin on—provides texture for grip. Toss in olive oil before roasting.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Cubes or mashed on spoon",
+          "preparation": "Roast and dice, or mash for preloaded spoon",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "high",
+      "intro_age_months": 6,
+      "fun_fact": "Raw carrots are a top choking hazard for babies—always cook until soft or grate finely until age 2+!",
+      "video_links": [
+        {
+          "title": "How to Serve Carrots Safely to Babies",
+          "url": "https://solidstarts.com/foods/carrot/",
+          "source": "Solid Starts",
+          "type": "safety"
+        },
+        {
+          "title": "Steamed Carrot Sticks for BLW",
+          "url": "https://www.feedinglittles.com/blog/carrots-for-babies",
+          "source": "Feeding Littles",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Cooked sticks or grated raw",
+          "preparation": "Steam or roast whole carrots until very soft, then cut into sticks. OR grate raw finely.",
+          "serving_tip": "Test softness—should smush easily between fingers",
+          "safety_note": "RAW CARROT is HIGH CHOKING RISK. Must be cooked very soft or finely grated until 2+ years."
+        },
+        "phase_2": {
+          "shape": "Soft cooked pieces",
+          "preparation": "Steam/roast and dice",
+          "serving_tip": "Mix grated raw carrot into meatballs or patties",
+          "safety_note": "Raw carrot pieces remain dangerous"
+        }
+      }
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Mild flavor makes it perfect for hiding in baked goods—great for picky eater prevention!",
+      "video_links": [
+        {
+          "title": "How to Serve Zucchini to Babies",
+          "url": "https://solidstarts.com/foods/zucchini/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thick spears",
+          "preparation": "Cut into thick sticks, steam or sauté until soft",
+          "serving_tip": "Can be slippery—leave skin on for grip",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Rounds or diced",
+          "preparation": "Slice into rounds or dice, cook until soft",
+          "serving_tip": "Great in fritters or mixed into pasta",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "bell_pepper",
+      "name": "Bell Pepper",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "vitamin_c_rich": true,
+      "fun_fact": "Red bell peppers have 3x more Vitamin C than oranges—perfect for boosting iron absorption!",
+      "video_links": [
+        {
+          "title": "How to Serve Bell Pepper to Babies",
+          "url": "https://solidstarts.com/foods/bell-pepper/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thick strips, roasted",
+          "preparation": "Cut into wide strips, roast until very soft and skin wrinkles. Peel skin if tough.",
+          "serving_tip": "Red/orange/yellow are sweeter than green. Excellent Vitamin C—pair with iron foods.",
+          "safety_note": "Raw pepper skin can be tough to chew—roast until soft for early eaters"
+        },
+        "phase_2": {
+          "shape": "Strips or diced",
+          "preparation": "Roast and slice, or dice into small pieces",
+          "serving_tip": "Great raw if sliced very thin for older babies",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "butternut_squash",
+      "name": "Butternut Squash",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Rich in beta-carotene and naturally sweet—babies often love this one from the start!",
+      "video_links": [
+        {
+          "title": "How to Serve Butternut Squash to Babies",
+          "url": "https://solidstarts.com/foods/butternut-squash/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Wedges or sticks",
+          "preparation": "Cut into wedges or thick sticks, roast at 400°F until very soft (~30 min)",
+          "serving_tip": "Leave skin on bottom for grip, scoop flesh",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Cubes or mashed",
+          "preparation": "Roast and dice, or mash for spoon",
+          "serving_tip": "Great mixed with cinnamon",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "peas",
+      "name": "Peas",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "medium",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "One of the highest protein vegetables—great for plant-based iron and muscle development!",
+      "video_links": [
+        {
+          "title": "How to Serve Peas to Babies",
+          "url": "https://solidstarts.com/foods/pea/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Smashed or in patties",
+          "preparation": "Cook and lightly smash each pea, or mash into patties with other ingredients",
+          "serving_tip": "Whole peas are hard to pick up with palmar grasp—mix into mashable foods",
+          "safety_note": "Lightly flatten to break skin"
+        },
+        "phase_2": {
+          "shape": "Whole or lightly smashed",
+          "preparation": "Serve whole for pincer grasp practice, smash if concerned",
+          "serving_tip": "Great for pincer grasp practice",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "spinach",
+      "name": "Spinach",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Contains non-heme iron—pair with Vitamin C foods to boost absorption by up to 6x!",
+      "video_links": [
+        {
+          "title": "How to Serve Spinach to Babies",
+          "url": "https://solidstarts.com/foods/spinach/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Cooked and finely chopped, or mixed in",
+          "preparation": "Sauté or steam until wilted, chop finely. Mix into eggs, patties, or sauces.",
+          "serving_tip": "Raw leafy greens can stick to throat—always cook for young babies",
+          "safety_note": "Do not serve raw—difficult to chew and can stick to back of throat"
+        },
+        "phase_2": {
+          "shape": "Chopped in dishes",
+          "preparation": "Continue cooking and mixing into foods",
+          "serving_tip": "Add to smoothies, scrambled eggs, pasta sauce",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "beef",
+      "name": "Beef",
+      "category": "protein",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Heme iron from beef is absorbed 2-3x better than plant iron. Baby sucks the iron-rich juices—this is perfect!",
+      "video_links": [
+        {
+          "title": "How to Serve Beef to Babies",
+          "url": "https://solidstarts.com/foods/beef/",
+          "source": "Solid Starts",
+          "type": "prep"
+        },
+        {
+          "title": "Steak Strips for Baby Led Weaning",
+          "url": "https://solidstarts.com/foods/steak/",
+          "source": "Solid Starts",
+          "type": "demo"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large strip (2+ adult fingers wide)",
+          "preparation": "Slow cook beef (brisket, chuck roast) until fall-apart tender, then cut into thick strips. OR offer a large steak strip cooked medium—baby sucks juices.",
+          "serving_tip": "Baby won't actually eat much meat fiber—they're sucking the iron-rich juices. This is perfect.",
+          "safety_note": "Size matters: too small = choking risk. Keep pieces LARGE so baby gnaws, doesn't swallow whole."
+        },
+        "phase_2": {
+          "shape": "Shredded or ground",
+          "preparation": "Shred slow-cooked beef, or offer ground beef crumbles/meatballs",
+          "serving_tip": "Ground beef in tomato sauce is iron + vitamin C pairing",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken (Dark Meat)",
+      "category": "protein",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "heme",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Dark meat (thighs, drumsticks) has 2x more iron and more healthy fats than white breast meat!",
+      "video_links": [
+        {
+          "title": "How to Serve Chicken to Babies",
+          "url": "https://solidstarts.com/foods/chicken/",
+          "source": "Solid Starts",
+          "type": "prep"
+        },
+        {
+          "title": "Drumstick for Baby Led Weaning",
+          "url": "https://solidstarts.com/foods/chicken-drumstick/",
+          "source": "Solid Starts",
+          "type": "demo"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Drumstick or thick thigh strip",
+          "preparation": "Slow cook or braise thighs until very tender. Offer drumstick to gnaw (remove loose cartilage/skin) or cut thigh into thick strips.",
+          "serving_tip": "Dark meat (thighs, drums) has more iron and fat than breast. Breast meat can be dry and stringy.",
+          "safety_note": "Check for bone fragments. Keep pieces large."
+        },
+        "phase_2": {
+          "shape": "Shredded",
+          "preparation": "Shred into small pieces",
+          "serving_tip": "Mix shredded chicken with sauce to add moisture",
+          "safety_note": "Dry chicken can be hard to swallow—add moisture"
+        }
+      }
+    },
+    {
+      "id": "salmon",
+      "name": "Salmon",
+      "category": "protein",
+      "is_allergen": true,
+      "allergen_type": "fish",
+      "iron_content": "medium",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "omega_3_rich": true,
+      "fun_fact": "Wild salmon contains DHA omega-3s critical for brain and eye development—baby's brain grows fastest in the first year!",
+      "video_links": [
+        {
+          "title": "How to Serve Salmon to Babies",
+          "url": "https://solidstarts.com/foods/salmon/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large flaked piece or strip",
+          "preparation": "Bake or poach until fully cooked and flaky. Offer a large piece to grip and gnaw, or form into a patty/log shape.",
+          "serving_tip": "Wild salmon has excellent omega-3s for brain development. Check thoroughly for bones.",
+          "safety_note": "CHECK FOR BONES. Run fingers over flesh before serving. Major allergen—introduce carefully."
+        },
+        "phase_2": {
+          "shape": "Flaked or in cakes",
+          "preparation": "Flake into small pieces or make salmon patties",
+          "serving_tip": "Canned salmon (bones removed) works great for patties",
+          "safety_note": "Continue checking for bones"
+        }
+      }
+    },
+    {
+      "id": "sardines",
+      "name": "Sardines",
+      "category": "protein",
+      "is_allergen": true,
+      "allergen_type": "fish",
+      "iron_content": "high",
+      "iron_type": "heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "omega_3_rich": true,
+      "fun_fact": "The tiny soft bones are safe to eat and provide calcium for growing bones! One of the most nutrient-dense foods.",
+      "video_links": [
+        {
+          "title": "How to Serve Sardines to Babies",
+          "url": "https://solidstarts.com/foods/sardines/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Mashed or whole small fish",
+          "preparation": "Use canned sardines in water or olive oil (low sodium). Mash with fork or offer whole small fish to gnaw.",
+          "serving_tip": "Tiny soft bones are safe to eat and add calcium. Incredibly nutrient-dense—iron, omega-3, vitamin D.",
+          "safety_note": "Major allergen—introduce carefully. Choose low-sodium options."
+        },
+        "phase_2": {
+          "shape": "Mashed or flaked",
+          "preparation": "Mash onto toast or flake into pasta",
+          "serving_tip": "Mix with avocado to mellow flavor",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "category": "protein",
+      "is_allergen": true,
+      "allergen_type": "egg",
+      "iron_content": "medium",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "The LEAP study showed early egg introduction (before 12 months) reduces allergy risk by up to 80%!",
+      "video_links": [
+        {
+          "title": "How to Serve Eggs to Babies",
+          "url": "https://solidstarts.com/foods/egg/",
+          "source": "Solid Starts",
+          "type": "prep"
+        },
+        {
+          "title": "Early Allergen Introduction",
+          "url": "https://www.feedinglittles.com/blog/introducing-allergens-to-babies",
+          "source": "Feeding Littles",
+          "type": "educational"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Omelet strips or hard-boiled wedges",
+          "preparation": "Make thin omelet, cut into strips. OR hard-boil, quarter lengthwise.",
+          "serving_tip": "Eggs must be fully cooked (no runny yolk) to avoid salmonella risk in babies.",
+          "safety_note": "MAJOR ALLERGEN. Introduce early (reduces allergy risk per LEAP research). Must be fully cooked."
+        },
+        "phase_2": {
+          "shape": "Scrambled or diced hard-boiled",
+          "preparation": "Soft scramble into small curds, or dice hard-boiled",
+          "serving_tip": "Scrambled eggs are great for preloaded spoon or pincer grasp",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "tofu",
+      "name": "Tofu",
+      "category": "protein",
+      "is_allergen": true,
+      "allergen_type": "soy",
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Excellent plant-based iron source! Pan-frying creates a grippy exterior that's easier for baby to hold.",
+      "video_links": [
+        {
+          "title": "How to Serve Tofu to Babies",
+          "url": "https://solidstarts.com/foods/tofu/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thick strips",
+          "preparation": "Use firm or extra-firm tofu. Cut into thick finger-length strips. Can serve raw, pan-fried, or baked.",
+          "serving_tip": "Pan-frying creates a grippy exterior. Excellent plant-based iron source.",
+          "safety_note": "Soy is a major allergen—introduce carefully."
+        },
+        "phase_2": {
+          "shape": "Cubes",
+          "preparation": "Dice into small cubes, pan-fry for texture",
+          "serving_tip": "Great in stir-fries and curries",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "lentils",
+      "name": "Lentils",
+      "category": "legume",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "One cup of cooked lentils has more iron than 3oz of beef! Pair with vitamin C for best absorption.",
+      "video_links": [
+        {
+          "title": "How to Serve Lentils to Babies",
+          "url": "https://solidstarts.com/foods/lentils/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Mashed or in patties",
+          "preparation": "Cook until very soft, mash partially. Form into patties or spread on toast.",
+          "serving_tip": "Pair with vitamin C (tomatoes, peppers, citrus) to boost iron absorption. Dal is perfect BLW food.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Whole or in dishes",
+          "preparation": "Serve whole cooked lentils or in soups/stews",
+          "serving_tip": "Red lentils cook down to mush—great for sauces. Green/brown hold shape better.",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "chickpeas",
+      "name": "Chickpeas",
+      "category": "legume",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Hummus (made from chickpeas and tahini) covers two allergens at once—sesame and chickpeas!",
+      "video_links": [
+        {
+          "title": "How to Serve Chickpeas to Babies",
+          "url": "https://solidstarts.com/foods/chickpea/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Smashed or as hummus",
+          "preparation": "Cook until very soft (canned works), smash each one lightly to break skin. Or serve as hummus on toast strips.",
+          "serving_tip": "Hummus is an excellent early BLW food—spread thin on toast or offer for dipping.",
+          "safety_note": "Flatten slightly to break skin—reduces choking risk"
+        },
+        "phase_2": {
+          "shape": "Whole smashed or roasted",
+          "preparation": "Smash lightly or roast until slightly crispy outside, soft inside",
+          "serving_tip": "Great pincer grasp food",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "black_beans",
+      "name": "Black Beans",
+      "category": "legume",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Packed with fiber and protein—great for building healthy gut bacteria during the critical early months!",
+      "video_links": [
+        {
+          "title": "How to Serve Black Beans to Babies",
+          "url": "https://solidstarts.com/foods/black-bean/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Mashed or smashed",
+          "preparation": "Cook until soft (canned works—rinse well), mash or smash individually",
+          "serving_tip": "Pair with mango or citrus for vitamin C boost. Great in quesadillas.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Whole or lightly smashed",
+          "preparation": "Serve whole for pincer grasp",
+          "serving_tip": "Mix into rice, tacos, or serve plain",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "yogurt",
+      "name": "Yogurt (Full-Fat Plain)",
+      "category": "dairy",
+      "is_allergen": true,
+      "allergen_type": "dairy",
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Babies need full-fat dairy for brain development—avoid low-fat until age 2. Yogurt is safe before milk as a drink!",
+      "video_links": [
+        {
+          "title": "How to Serve Yogurt to Babies",
+          "url": "https://solidstarts.com/foods/yogurt/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Preloaded spoon",
+          "preparation": "Load yogurt onto spoon, hand spoon to baby",
+          "serving_tip": "Full-fat plain yogurt is best—babies need fat for brain development. Avoid added sugars.",
+          "safety_note": "Dairy is a major allergen—introduce carefully. Yogurt is safe before cow's milk as a drink."
+        },
+        "phase_2": {
+          "shape": "Preloaded spoon or dip",
+          "preparation": "Same—offer loaded spoon or as dip for fruits",
+          "serving_tip": "Greek yogurt is thicker and easier to manage",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "category": "dairy",
+      "is_allergen": true,
+      "allergen_type": "dairy",
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Cheese cubes are actually a choking hazard because they're rubbery! Always serve thin strips or melted.",
+      "video_links": [
+        {
+          "title": "How to Serve Cheese Safely to Babies",
+          "url": "https://solidstarts.com/foods/cheese/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thin strips or grated",
+          "preparation": "Cut into very thin strips (not cubes), or grate/shred. Soft cheeses can be spread.",
+          "serving_tip": "Avoid cubes—rubbery texture is choking risk. Thin strips or melted on toast works better.",
+          "safety_note": "NO CUBES. Cheese cubes are rubbery and hard to chew. Cut into thin strips or shred."
+        },
+        "phase_2": {
+          "shape": "Thin slices or shredded",
+          "preparation": "Thin slices, shredded, or melted into dishes",
+          "serving_tip": "Ricotta and cottage cheese work well on spoons",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "peanut_butter",
+      "name": "Peanut Butter",
+      "category": "other",
+      "is_allergen": true,
+      "allergen_type": "peanut",
+      "iron_content": "medium",
+      "choking_risk": "high",
+      "intro_age_months": 6,
+      "fun_fact": "The LEAP study proved early peanut intro (4-11mo) reduces allergy risk by 81%! Introduce early and often.",
+      "video_links": [
+        {
+          "title": "How to Serve Peanut Butter Safely",
+          "url": "https://solidstarts.com/foods/peanut-butter/",
+          "source": "Solid Starts",
+          "type": "safety"
+        },
+        {
+          "title": "LEAP Study and Early Allergen Introduction",
+          "url": "https://www.feedinglittles.com/blog/introducing-peanuts-to-babies",
+          "source": "Feeding Littles",
+          "type": "educational"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thinned or spread very thin",
+          "preparation": "Thin with water, breastmilk, or formula until sauce consistency. Mix into oatmeal/yogurt. OR spread paper-thin on toast.",
+          "serving_tip": "Early peanut introduction (4-11mo) reduces allergy risk by up to 81% (LEAP study). Introduce EARLY.",
+          "safety_note": "NEVER OFFER A GLOB OR THICK SPREAD. Thick peanut butter is a serious choking/aspiration hazard. Must be thinned or spread translucent-thin."
+        },
+        "phase_2": {
+          "shape": "Thinned or thin spread",
+          "preparation": "Continue thinning or spreading very thin",
+          "serving_tip": "Bamba puffs (Israeli peanut snack) are great—dissolve in mouth",
+          "safety_note": "Continue to avoid thick globs"
+        }
+      }
+    },
+    {
+      "id": "almond_butter",
+      "name": "Almond Butter",
+      "category": "other",
+      "is_allergen": true,
+      "allergen_type": "tree_nut",
+      "iron_content": "medium",
+      "choking_risk": "high",
+      "intro_age_months": 6,
+      "fun_fact": "Tree nut allergies are separate from peanut allergies—introduce each type of nut separately.",
+      "video_links": [
+        {
+          "title": "How to Serve Tree Nut Butters to Babies",
+          "url": "https://solidstarts.com/foods/almond-butter/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thinned or spread very thin",
+          "preparation": "Same as peanut butter—thin with liquid or spread paper-thin on toast",
+          "serving_tip": "Tree nut allergen—introduce after peanut if doing one allergen at a time",
+          "safety_note": "Same as peanut butter—NEVER thick globs. High aspiration risk."
+        },
+        "phase_2": {
+          "shape": "Thinned or thin spread",
+          "preparation": "Continue thinning or spreading very thin",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "tahini",
+      "name": "Tahini",
+      "category": "other",
+      "is_allergen": true,
+      "allergen_type": "sesame",
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Sesame became the 9th major allergen in 2023. Tahini-based hummus covers two allergens at once!",
+      "video_links": [
+        {
+          "title": "How to Serve Tahini to Babies",
+          "url": "https://solidstarts.com/foods/tahini/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thinned or mixed in",
+          "preparation": "Stir well (separates), thin if very thick. Mix into oatmeal, yogurt, or hummus. Spread thin on toast.",
+          "serving_tip": "Sesame is now a top-9 allergen. Excellent iron source. Tahini-based hummus covers two allergens.",
+          "safety_note": "Sesame allergen—introduce carefully."
+        },
+        "phase_2": {
+          "shape": "Mixed in or as dip",
+          "preparation": "Use in sauces, dressings, hummus",
+          "serving_tip": "Great drizzled on roasted vegetables",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "shrimp",
+      "name": "Shrimp",
+      "category": "protein",
+      "is_allergen": true,
+      "allergen_type": "shellfish",
+      "iron_content": "medium",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Shellfish allergy is separate from fish allergy—being allergic to one doesn't mean you're allergic to the other.",
+      "video_links": [
+        {
+          "title": "How to Serve Shrimp to Babies",
+          "url": "https://solidstarts.com/foods/shrimp/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Whole large shrimp or minced",
+          "preparation": "Fully cook. Serve whole large shrimp to gnaw, or mince/chop finely and mix into other foods.",
+          "serving_tip": "If baby can grip a whole shrimp, they can gnaw on it. Otherwise mince.",
+          "safety_note": "Major allergen—introduce carefully. Must be fully cooked."
+        },
+        "phase_2": {
+          "shape": "Chopped or whole",
+          "preparation": "Chop into small pieces or serve whole if manageable",
+          "serving_tip": "Great in pasta or rice dishes",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "toast",
+      "name": "Toast/Bread",
+      "category": "grain",
+      "is_allergen": true,
+      "allergen_type": "wheat",
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Toasting changes the texture so bread dissolves better than soft bread, which can gum up in baby's mouth.",
+      "video_links": [
+        {
+          "title": "How to Serve Toast to Babies",
+          "url": "https://solidstarts.com/foods/bread/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Strips, lightly toasted",
+          "preparation": "Toast bread lightly (not too crispy), cut into 2-finger-wide strips",
+          "serving_tip": "Toasting changes texture—makes it dissolve better than soft bread which can gum up. Great vehicle for spreads (hummus, nut butters, avocado).",
+          "safety_note": "Soft white bread can be gummy and stick in mouth. Toast lightly. Sourdough or whole grain works well."
+        },
+        "phase_2": {
+          "shape": "Strips or small pieces",
+          "preparation": "Continue with strips or cut into smaller pieces",
+          "serving_tip": "Can increase toasting as chewing improves",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "category": "grain",
+      "is_allergen": true,
+      "allergen_type": "wheat",
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Tube shapes like penne and rigatoni are easiest for baby's palmar grasp—they can thread it on their fingers!",
+      "video_links": [
+        {
+          "title": "How to Serve Pasta to Babies",
+          "url": "https://solidstarts.com/foods/pasta/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large tubes or long strips",
+          "preparation": "Cook until soft. Fusilli, rigatoni, or penne work well—easy to grip. Or offer long spaghetti strands.",
+          "serving_tip": "Tube shapes are easiest to grip with palmar grasp. Spaghetti is messy but fun.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Any shape, cut if needed",
+          "preparation": "Cut long pasta if concerned, otherwise serve as-is",
+          "serving_tip": "Add sauce for nutrition and fun",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "oatmeal",
+      "name": "Oatmeal",
+      "category": "grain",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Baby oatmeal is often iron-fortified—check the label! Great base for mixing in nut butters and fruits.",
+      "video_links": [
+        {
+          "title": "Oatmeal Balls for Baby Led Weaning",
+          "url": "https://www.instagram.com/101beforeone/",
+          "source": "101 Before One",
+          "type": "prep"
+        },
+        {
+          "title": "How to Serve Oatmeal to Babies",
+          "url": "https://solidstarts.com/foods/oatmeal/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Preloaded spoon or thick enough to form balls",
+          "preparation": "Cook oats thick (less liquid). Load onto spoon for baby to grab, or form into balls/fingers if thick enough.",
+          "serving_tip": "Often fortified with iron—check label. Great base for mixing in nut butters, fruit, seeds.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Preloaded spoon or baked into fingers",
+          "preparation": "Spoon-feed or bake into oat bars/fingers",
+          "serving_tip": "Overnight oats, baked oatmeal bars, or oat pancakes all work",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "category": "grain",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Rice absorbs more arsenic than other grains—rinse well, cook in excess water, and vary grains for safety.",
+      "video_links": [
+        {
+          "title": "How to Serve Rice to Babies",
+          "url": "https://solidstarts.com/foods/rice/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Balls or mixed into patties",
+          "preparation": "Cook sticky/sushi rice, form into balls or logs. Or mix into lentil/bean patties.",
+          "serving_tip": "Loose rice is hard to pick up—form into shapes or mix with sticky foods.",
+          "safety_note": "Rice absorbs arsenic more than other grains. Rinse well, cook in excess water, drain. Vary grains—don't rely solely on rice."
+        },
+        "phase_2": {
+          "shape": "Loose or in dishes",
+          "preparation": "Can serve loose for pincer grasp practice, or in mixed dishes",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "quinoa",
+      "name": "Quinoa",
+      "category": "grain",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "One of the few plant foods that's a complete protein—contains all 9 essential amino acids!",
+      "video_links": [
+        {
+          "title": "How to Serve Quinoa to Babies",
+          "url": "https://solidstarts.com/foods/quinoa/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "In patties or mixed dishes",
+          "preparation": "Cook and mix into patties, meatballs, or mashed foods",
+          "serving_tip": "Complete protein (all amino acids). Great iron source. Too small to pick up alone at first.",
+          "safety_note": "Rinse well before cooking to remove bitter coating"
+        },
+        "phase_2": {
+          "shape": "Loose or in dishes",
+          "preparation": "Serve loose for pincer grasp or in mixed dishes",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "pancakes",
+      "name": "Pancakes",
+      "category": "grain",
+      "is_allergen": true,
+      "allergen_type": "wheat",
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Easy to fortify with hidden nutrition—blend in spinach, banana, pumpkin, or nut butter!",
+      "video_links": [
+        {
+          "title": "Baby Pancake Recipes",
+          "url": "https://www.feedinglittles.com/blog/baby-pancakes",
+          "source": "Feeding Littles",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Strips",
+          "preparation": "Make thin pancakes, cut into finger-width strips",
+          "serving_tip": "Easy to fortify—add mashed banana, pumpkin, spinach, nut butter to batter. Can be egg-free (allergen management).",
+          "safety_note": "If using egg in batter, counts toward egg allergen exposure"
+        },
+        "phase_2": {
+          "shape": "Strips or small pieces",
+          "preparation": "Cut into strips or bite-sized pieces",
+          "serving_tip": "Freeze extras for quick meals",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "edamame",
+      "name": "Edamame",
+      "category": "legume",
+      "is_allergen": true,
+      "allergen_type": "soy",
+      "iron_content": "medium",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Never serve in pods—they're a choking hazard. Always remove beans and smash to break the skin.",
+      "video_links": [
+        {
+          "title": "How to Serve Edamame to Babies",
+          "url": "https://solidstarts.com/foods/edamame/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Smashed or pureed",
+          "preparation": "Cook, remove from pods, smash each bean or mash into a spread",
+          "serving_tip": "Never serve in pods—choking hazard. Smash to break skin.",
+          "safety_note": "Soy allergen. Do not serve in pods. Smash or flatten each bean."
+        },
+        "phase_2": {
+          "shape": "Smashed or whole",
+          "preparation": "Smash lightly or serve whole for pincer grasp",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "liver",
+      "name": "Liver (Chicken/Beef)",
+      "category": "protein",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "The most iron-dense food available! Grate frozen liver into pasta sauce—baby won't even taste it.",
+      "video_links": [
+        {
+          "title": "How to Serve Liver to Babies",
+          "url": "https://solidstarts.com/foods/liver/",
+          "source": "Solid Starts",
+          "type": "prep"
+        },
+        {
+          "title": "Hidden Liver Recipes for Babies",
+          "url": "https://www.instagram.com/babyledweanteam/",
+          "source": "Baby Led Weaning Team",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Pâté on toast or strips",
+          "preparation": "Make into pâté and spread on toast strips. Or cook and cut into strips.",
+          "serving_tip": "MOST iron-dense food. A little goes a long way. Limit to 1-2x per week due to high Vitamin A.",
+          "safety_note": "Limit frequency due to high Vitamin A content which can be toxic in excess."
+        },
+        "phase_2": {
+          "shape": "Pâté or chopped",
+          "preparation": "Spread on toast or chop into dishes",
+          "serving_tip": "Chicken liver pâté is milder in flavor",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "lamb",
+      "name": "Lamb",
+      "category": "protein",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Like beef, lamb provides highly absorbable heme iron. Baby sucks the nutritious juices while gnawing!",
+      "video_links": [
+        {
+          "title": "How to Serve Lamb to Babies",
+          "url": "https://solidstarts.com/foods/lamb/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large strip or chop bone",
+          "preparation": "Slow cook until tender, cut into thick strips. Or offer lamb chop bone to gnaw.",
+          "serving_tip": "Similar to beef—baby sucks iron-rich juices. Excellent iron source.",
+          "safety_note": "Keep pieces large. Check for bone fragments if offering chop."
+        },
+        "phase_2": {
+          "shape": "Shredded or ground",
+          "preparation": "Shred or use ground lamb in patties, meatballs",
+          "serving_tip": "Great in Mediterranean-spiced dishes",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "hummus",
+      "name": "Hummus",
+      "category": "legume",
+      "is_allergen": true,
+      "allergen_type": "sesame",
+      "iron_content": "medium",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Covers two allergens at once—sesame (from tahini) and chickpeas! A BLW staple food.",
+      "video_links": [
+        {
+          "title": "How to Serve Hummus to Babies",
+          "url": "https://solidstarts.com/foods/hummus/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Spread on toast or for dipping",
+          "preparation": "Spread on toast strips, or offer as dip with vegetable spears",
+          "serving_tip": "Covers sesame allergen (tahini) and chickpeas. High iron. Excellent BLW food.",
+          "safety_note": "Contains sesame (tahini)—introduce as allergen. Check label for other allergens."
+        },
+        "phase_2": {
+          "shape": "Spread or dip",
+          "preparation": "Same—spread or dip",
+          "serving_tip": "Make your own to control salt content",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "meatballs",
+      "name": "Meatballs (Beef/Turkey/Chicken)",
+      "category": "protein",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "heme",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Shape matters! Oval/log shapes are safer than round balls because they won't plug the airway.",
+      "video_links": [
+        {
+          "title": "Safe Meatball Shapes for Babies",
+          "url": "https://solidstarts.com/foods/meatballs/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Oval/log shape, not round",
+          "preparation": "Form ground meat into oval/log shapes (not perfect spheres). Bake until cooked through.",
+          "serving_tip": "Oval shape is safer than round—less likely to plug airway. Add grated veggies to boost nutrition.",
+          "safety_note": "Avoid perfect round balls—shape into ovals or flatten slightly to reduce choking risk."
+        },
+        "phase_2": {
+          "shape": "Quartered or crumbled",
+          "preparation": "Quarter meatballs or crumble into smaller pieces",
+          "serving_tip": "Great in pasta sauce (iron + vitamin C pairing)",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "cod",
+      "name": "Cod",
+      "category": "protein",
+      "is_allergen": true,
+      "allergen_type": "fish",
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Mild white fish is often the best first fish for babies—less fishy taste than salmon or sardines.",
+      "video_links": [
+        {
+          "title": "How to Serve Cod to Babies",
+          "url": "https://solidstarts.com/foods/cod/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large flaked piece",
+          "preparation": "Bake or poach until flaky. Offer large piece to grip.",
+          "serving_tip": "Mild white fish—good intro to fish allergen. Check thoroughly for bones.",
+          "safety_note": "Fish allergen—introduce carefully. Check meticulously for bones."
+        },
+        "phase_2": {
+          "shape": "Flaked or in fish cakes",
+          "preparation": "Flake into pieces or form into cakes",
+          "serving_tip": "Great in fish tacos or fish cakes",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "greek_yogurt",
+      "name": "Greek Yogurt (Full-Fat Plain)",
+      "category": "dairy",
+      "is_allergen": true,
+      "allergen_type": "dairy",
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Thicker than regular yogurt with 2x the protein—easier for babies to manage on a spoon!",
+      "video_links": [
+        {
+          "title": "How to Serve Greek Yogurt to Babies",
+          "url": "https://solidstarts.com/foods/greek-yogurt/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Preloaded spoon",
+          "preparation": "Load onto spoon, hand to baby",
+          "serving_tip": "Thicker than regular yogurt—easier to manage. Higher protein. Avoid sweetened varieties.",
+          "safety_note": "Dairy allergen—introduce carefully."
+        },
+        "phase_2": {
+          "shape": "Preloaded spoon or dip",
+          "preparation": "Same as phase 1",
+          "serving_tip": "Great base for mixing in fruit, nut butters, seeds",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "ricotta",
+      "name": "Ricotta Cheese",
+      "category": "dairy",
+      "is_allergen": true,
+      "allergen_type": "dairy",
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Soft, mild, and spreadable—one of the easiest cheeses for babies to enjoy safely.",
+      "video_links": [
+        {
+          "title": "How to Serve Ricotta to Babies",
+          "url": "https://solidstarts.com/foods/ricotta/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Spread or preloaded spoon",
+          "preparation": "Spread on toast strips or load onto spoon",
+          "serving_tip": "Soft texture, mild flavor. Great mixed with mashed fruit.",
+          "safety_note": "Dairy allergen."
+        },
+        "phase_2": {
+          "shape": "Spread or mixed",
+          "preparation": "Same—spread or mix into dishes",
+          "serving_tip": "Great in pasta dishes",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "kiwi",
+      "name": "Kiwi",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "vitamin_c_rich": true,
+      "fun_fact": "One of the highest Vitamin C fruits—even higher than oranges! The seeds are safe to eat.",
+      "video_links": [
+        {
+          "title": "How to Serve Kiwi to Babies",
+          "url": "https://solidstarts.com/foods/kiwi/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Halved with skin, or thick slices",
+          "preparation": "Cut in half, leave skin on—baby scoops flesh with mouth. Or peel and slice into thick wedges.",
+          "serving_tip": "Very high in vitamin C—great iron pairing. Seeds are fine to eat.",
+          "safety_note": "Can cause mouth tingling in some babies (actinidin enzyme)—not an allergy, but watch for reaction"
+        },
+        "phase_2": {
+          "shape": "Slices or diced",
+          "preparation": "Peel and slice or dice",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "orange",
+      "name": "Orange",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "vitamin_c_rich": true,
+      "fun_fact": "The membrane around each segment is tough to chew—remove it (called supreming) for safe serving!",
+      "video_links": [
+        {
+          "title": "How to Serve Oranges to Babies",
+          "url": "https://solidstarts.com/foods/orange/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Supremed segments (membrane removed)",
+          "preparation": "Peel, separate into segments, remove the membrane/skin around each segment (supreming)",
+          "serving_tip": "Membrane is tough to chew—remove it. The flesh itself is soft. Great vitamin C source.",
+          "safety_note": "Remove membrane—choking risk. Seeds must be removed."
+        },
+        "phase_2": {
+          "shape": "Segments or pieces",
+          "preparation": "Remove membrane, cut into pieces if needed",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "vitamin_c_rich": true,
+      "fun_fact": "Cherry and grape tomatoes are perfect choking shape when whole—always quarter lengthwise!",
+      "video_links": [
+        {
+          "title": "How to Cut Tomatoes Safely for Babies",
+          "url": "https://solidstarts.com/foods/tomato/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large wedges or quartered cherry tomatoes",
+          "preparation": "Large tomato: cut into wedges. Cherry/grape tomatoes: quarter lengthwise (NEVER whole).",
+          "serving_tip": "Great vitamin C for iron absorption. Skin provides grip.",
+          "safety_note": "NEVER serve cherry/grape tomatoes whole—perfect choking shape. Must quarter lengthwise."
+        },
+        "phase_2": {
+          "shape": "Quartered or diced",
+          "preparation": "Quarter small tomatoes, dice large ones",
+          "serving_tip": "Great in sauces, which pair well with iron-rich proteins",
+          "safety_note": "Continue quartering small round tomatoes"
+        }
+      }
+    },
+    {
+      "id": "asparagus",
+      "name": "Asparagus",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "medium",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Natural handle shape makes it a perfect first finger food—baby holds the stem and eats the tip!",
+      "video_links": [
+        {
+          "title": "How to Serve Asparagus to Babies",
+          "url": "https://solidstarts.com/foods/asparagus/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Whole spears",
+          "preparation": "Snap off woody ends, steam or roast until soft",
+          "serving_tip": "Natural handle shape—perfect for BLW. Baby holds stem, eats tip.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Spears or chopped",
+          "preparation": "Whole spears or cut into pieces",
+          "serving_tip": "Great roasted with olive oil and parmesan",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "vitamin_c_rich": true,
+      "fun_fact": "Like broccoli, the stem is a natural handle! Contains Vitamin C to boost iron absorption.",
+      "video_links": [
+        {
+          "title": "How to Serve Cauliflower to Babies",
+          "url": "https://solidstarts.com/foods/cauliflower/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large florets with stem",
+          "preparation": "Steam or roast until fork-tender. Keep stem attached as handle.",
+          "serving_tip": "Like broccoli—stem is the handle. Good vitamin C source.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Florets or mashed",
+          "preparation": "Smaller florets or mash for spoon",
+          "serving_tip": "Great mashed with butter and cheese",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "green_beans",
+      "name": "Green Beans",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Natural finger shape makes them a perfect early BLW food—easy to grip and gum!",
+      "video_links": [
+        {
+          "title": "How to Serve Green Beans to Babies",
+          "url": "https://solidstarts.com/foods/green-bean/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Whole beans",
+          "preparation": "Steam until soft, serve whole (trim ends)",
+          "serving_tip": "Natural finger shape. Easy to grip.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Whole or chopped",
+          "preparation": "Whole or cut into pieces",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Cooling and hydrating—great for teething discomfort! Score the skin with a fork to add grip.",
+      "video_links": [
+        {
+          "title": "How to Serve Cucumber to Babies",
+          "url": "https://solidstarts.com/foods/cucumber/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thick spears with skin scored",
+          "preparation": "Cut into thick spears. Score skin with fork for grip. Can also peel if preferred.",
+          "serving_tip": "Cooling and hydrating. Good for teething. Low calorie—not a main food.",
+          "safety_note": "Skin can be slippery—score with fork or partially peel"
+        },
+        "phase_2": {
+          "shape": "Spears or rounds",
+          "preparation": "Spears or thick rounds",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "corn",
+      "name": "Corn",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Corn kernels pass through undigested—totally normal! Cob gnawing is great for oral development.",
+      "video_links": [
+        {
+          "title": "How to Serve Corn to Babies",
+          "url": "https://solidstarts.com/foods/corn/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Cob section or mashed",
+          "preparation": "Cook corn on cob, cut into small sections for baby to gnaw. Or cut kernels off and mash/mix into other foods.",
+          "serving_tip": "Whole kernels pass through undigested—normal! Cob gnawing is good for oral development.",
+          "safety_note": "Individual kernels can be hard to chew—mash or flatten for young babies"
+        },
+        "phase_2": {
+          "shape": "Kernels or cob",
+          "preparation": "Serve kernels or cob sections",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "beets",
+      "name": "Beets",
+      "category": "vegetable",
+      "is_allergen": false,
+      "iron_content": "medium",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Will stain everything red—consider it a rite of passage! Great source of natural nitrates for blood flow.",
+      "video_links": [
+        {
+          "title": "How to Serve Beets to Babies",
+          "url": "https://solidstarts.com/foods/beet/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Wedges or sticks",
+          "preparation": "Roast whole until soft, peel, cut into wedges or sticks",
+          "serving_tip": "Will stain everything red—be prepared! Good iron source.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Cubes or grated",
+          "preparation": "Dice or grate into dishes",
+          "serving_tip": "Great in pancakes or muffins (hides well)",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "pork",
+      "name": "Pork",
+      "category": "protein",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "Choose fattier cuts like shoulder for baby—tenderloin can be too dry. Baby sucks the nutritious juices!",
+      "video_links": [
+        {
+          "title": "How to Serve Pork to Babies",
+          "url": "https://solidstarts.com/foods/pork/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Large strips or rib bone",
+          "preparation": "Slow cook pork shoulder until shreddable, cut into strips. Or offer a large rib bone to gnaw.",
+          "serving_tip": "Similar to beef—baby sucks juices and gnaws. Tenderloin can be dry—choose fattier cuts.",
+          "safety_note": "Must be fully cooked. Keep pieces large."
+        },
+        "phase_2": {
+          "shape": "Shredded or ground",
+          "preparation": "Shred pulled pork or use ground",
+          "serving_tip": "Great in tacos, stir-fries",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "hemp_seeds",
+      "name": "Hemp Seeds (Hemp Hearts)",
+      "category": "other",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "omega_3_rich": true,
+      "fun_fact": "Excellent iron, protein, and omega-3s! Roll slippery foods like avocado in hemp seeds for better grip.",
+      "video_links": [
+        {
+          "title": "How to Serve Hemp Seeds to Babies",
+          "url": "https://solidstarts.com/foods/hemp-seed/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Sprinkled on foods",
+          "preparation": "Sprinkle on yogurt, oatmeal, avocado, etc.",
+          "serving_tip": "Excellent iron, protein, omega-3s. Great for rolling slippery foods (avocado) to add grip.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Sprinkled",
+          "preparation": "Same—sprinkle on foods",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "chia_seeds",
+      "name": "Chia Seeds",
+      "category": "other",
+      "is_allergen": false,
+      "iron_content": "high",
+      "iron_type": "non_heme",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "omega_3_rich": true,
+      "fun_fact": "Must always be soaked—dry chia can expand and clump in baby's throat! Chia pudding is a great option.",
+      "video_links": [
+        {
+          "title": "How to Serve Chia Seeds to Babies",
+          "url": "https://solidstarts.com/foods/chia-seed/",
+          "source": "Solid Starts",
+          "type": "safety"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Soaked or mixed in",
+          "preparation": "Soak in liquid to form gel (chia pudding), or sprinkle into oatmeal/yogurt",
+          "serving_tip": "Must hydrate—dry chia can clump. Good iron and omega-3 source.",
+          "safety_note": "Always serve hydrated/soaked—dry chia can expand and clump in throat"
+        },
+        "phase_2": {
+          "shape": "Soaked or mixed",
+          "preparation": "Same—always hydrated",
+          "serving_tip": "Great in smoothies, puddings",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "plantain",
+      "name": "Plantain",
+      "category": "fruit",
+      "is_allergen": false,
+      "iron_content": "low",
+      "choking_risk": "low",
+      "intro_age_months": 6,
+      "fun_fact": "A staple in Caribbean, Latin American, and African cuisines—ripe (yellow/black) is sweeter and softer!",
+      "video_links": [
+        {
+          "title": "How to Serve Plantain to Babies",
+          "url": "https://solidstarts.com/foods/plantain/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Baked/steamed strips",
+          "preparation": "Use ripe (yellow/black) plantain. Bake or steam until soft, cut into strips.",
+          "serving_tip": "Ripe plantain is sweeter and softer. Green plantain is starchier—cook longer.",
+          "safety_note": null
+        },
+        "phase_2": {
+          "shape": "Rounds or mashed",
+          "preparation": "Slice into rounds or mash (like mofongo/fufu style)",
+          "serving_tip": "Staple in Caribbean, Latin American, African cuisines",
+          "safety_note": null
+        }
+      }
+    },
+    {
+      "id": "turkey",
+      "name": "Turkey (Dark Meat)",
+      "category": "protein",
+      "is_allergen": false,
+      "iron_content": "medium",
+      "choking_risk": "medium",
+      "intro_age_months": 6,
+      "fun_fact": "Dark meat (legs, thighs) is more moist and nutritious than breast. Ground turkey makes great meatballs!",
+      "video_links": [
+        {
+          "title": "How to Serve Turkey to Babies",
+          "url": "https://solidstarts.com/foods/turkey/",
+          "source": "Solid Starts",
+          "type": "prep"
+        }
+      ],
+      "prep_guides": {
+        "phase_1": {
+          "shape": "Thick strips or drumstick",
+          "preparation": "Slow cook dark meat until very tender, cut into strips. Or offer drumstick to gnaw.",
+          "serving_tip": "Dark meat is more moist than breast. Ground turkey works well in meatballs.",
+          "safety_note": "Turkey breast can be very dry—add moisture or choose dark meat"
+        },
+        "phase_2": {
+          "shape": "Shredded or ground",
+          "preparation": "Shred or use ground in patties/meatballs",
+          "serving_tip": null,
+          "safety_note": null
+        }
+      }
+    }
+  ]
+}

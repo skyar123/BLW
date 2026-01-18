@@ -1,0 +1,301 @@
+{
+  "badges": [
+    {
+      "id": "first_bite",
+      "slug": "first-bite",
+      "name": "First Bite",
+      "description": "Logged your first solid food!",
+      "emoji": "🥑",
+      "criteria": {
+        "type": "total_logs",
+        "value": 1
+      },
+      "celebration_message": "The journey begins! 🎉"
+    },
+    {
+      "id": "one_week_in",
+      "slug": "one-week-in",
+      "name": "One Week In",
+      "description": "Logged food for 7 different days",
+      "emoji": "📅",
+      "criteria": {
+        "type": "unique_days_logged",
+        "value": 7
+      },
+      "celebration_message": "A whole week of exploring food!"
+    },
+    {
+      "id": "rainbow_week",
+      "slug": "rainbow-week",
+      "name": "Rainbow Week",
+      "description": "Tried 5 different colored foods in one week",
+      "emoji": "🌈",
+      "criteria": {
+        "type": "colors_in_7_days",
+        "value": 5,
+        "colors": ["red", "orange", "yellow", "green", "purple", "white", "brown"]
+      },
+      "celebration_message": "Eating the rainbow! 🌈"
+    },
+    {
+      "id": "iron_champion",
+      "slug": "iron-champion",
+      "name": "Iron Champion",
+      "description": "7 consecutive days with iron-rich foods",
+      "emoji": "🥩",
+      "criteria": {
+        "type": "consecutive_days_with_tag",
+        "tag": "iron_content",
+        "tag_values": ["high", "medium"],
+        "value": 7
+      },
+      "celebration_message": "Building strong blood and brain! 💪"
+    },
+    {
+      "id": "allergen_brave",
+      "slug": "allergen-brave",
+      "name": "Allergen Brave",
+      "description": "Introduced your first allergen",
+      "emoji": "🥜",
+      "criteria": {
+        "type": "allergens_introduced",
+        "value": 1
+      },
+      "celebration_message": "Building immune tolerance early!"
+    },
+    {
+      "id": "allergen_explorer",
+      "slug": "allergen-explorer",
+      "name": "Allergen Explorer",
+      "description": "Successfully introduced all 9 major allergens",
+      "emoji": "🏆",
+      "criteria": {
+        "type": "allergens_introduced",
+        "value": 9
+      },
+      "celebration_message": "All 9 allergens introduced! Incredible work! 🎊"
+    },
+    {
+      "id": "twin_sync",
+      "slug": "twin-sync",
+      "name": "Twin Sync",
+      "description": "Both babies tried the same new food on the same day",
+      "emoji": "👯",
+      "criteria": {
+        "type": "same_first_food_same_day",
+        "value": true
+      },
+      "celebration_message": "Exploring together! 👯‍♀️"
+    },
+    {
+      "id": "twin_sync_5",
+      "slug": "twin-sync-5",
+      "name": "Double Trouble",
+      "description": "Both babies tried the same new food on the same day — 5 times!",
+      "emoji": "👯‍♂️",
+      "criteria": {
+        "type": "same_first_food_same_day_count",
+        "value": 5
+      },
+      "celebration_message": "Five synchronized firsts!"
+    },
+    {
+      "id": "protein_power",
+      "slug": "protein-power",
+      "name": "Protein Power",
+      "description": "Tried 5 different protein sources",
+      "emoji": "💪",
+      "criteria": {
+        "type": "unique_foods_in_category",
+        "category": "protein",
+        "value": 5
+      },
+      "celebration_message": "Growing strong!"
+    },
+    {
+      "id": "veggie_lover",
+      "slug": "veggie-lover",
+      "name": "Veggie Lover",
+      "description": "Tried 10 different vegetables",
+      "emoji": "🥦",
+      "criteria": {
+        "type": "unique_foods_in_category",
+        "category": "vegetable",
+        "value": 10
+      },
+      "celebration_message": "A vegetable adventurer!"
+    },
+    {
+      "id": "fruit_fan",
+      "slug": "fruit-fan",
+      "name": "Fruit Fan",
+      "description": "Tried 10 different fruits",
+      "emoji": "🍓",
+      "criteria": {
+        "type": "unique_foods_in_category",
+        "category": "fruit",
+        "value": 10
+      },
+      "celebration_message": "Sweet success!"
+    },
+    {
+      "id": "25_foods",
+      "slug": "25-foods-club",
+      "name": "25 Foods Club",
+      "description": "Tried 25 unique foods",
+      "emoji": "⭐",
+      "criteria": {
+        "type": "unique_foods",
+        "value": 25
+      },
+      "celebration_message": "25 new flavors and textures! 🌟"
+    },
+    {
+      "id": "50_foods",
+      "slug": "50-foods-club",
+      "name": "50 Foods Club",
+      "description": "Tried 50 unique foods",
+      "emoji": "🌟",
+      "criteria": {
+        "type": "unique_foods",
+        "value": 50
+      },
+      "celebration_message": "Halfway to 100! Incredible variety! ✨"
+    },
+    {
+      "id": "100_foods",
+      "slug": "100-foods-club",
+      "name": "100 Foods Club",
+      "description": "Tried 100 unique foods before turning 1",
+      "emoji": "🎉",
+      "criteria": {
+        "type": "unique_foods",
+        "value": 100
+      },
+      "celebration_message": "THE HUNDRED CLUB! This is legendary! 🏆🎊"
+    },
+    {
+      "id": "world_traveler",
+      "slug": "world-traveler",
+      "name": "World Traveler",
+      "description": "Tried foods from 5+ different cuisines",
+      "emoji": "🌍",
+      "criteria": {
+        "type": "unique_cultural_tags",
+        "value": 5
+      },
+      "celebration_message": "A global palate in the making!"
+    },
+    {
+      "id": "gag_warrior",
+      "slug": "gag-warrior",
+      "name": "Gag Warrior",
+      "description": "Pushed through 10+ gags and kept trying",
+      "emoji": "😤",
+      "criteria": {
+        "type": "response_count",
+        "response": "gagged",
+        "value": 10
+      },
+      "celebration_message": "Gagging is learning! Look at that resilience! 💪"
+    },
+    {
+      "id": "try_try_again",
+      "slug": "try-try-again",
+      "name": "Try, Try Again",
+      "description": "Tried a previously refused food and had a different response",
+      "emoji": "🔄",
+      "criteria": {
+        "type": "food_retry_success",
+        "value": true
+      },
+      "celebration_message": "Persistence pays off!"
+    },
+    {
+      "id": "pincer_pro",
+      "slug": "pincer-pro",
+      "name": "Pincer Pro",
+      "description": "First food logged with bite-sized serving (pincer grasp milestone)",
+      "emoji": "🤏",
+      "criteria": {
+        "type": "first_serving_method",
+        "serving_method": "bite_sized"
+      },
+      "celebration_message": "Those little fingers are getting precise! 🤏"
+    },
+    {
+      "id": "spoon_scoop",
+      "slug": "spoon-scoop",
+      "name": "Spoon Scoop",
+      "description": "First food logged with preloaded spoon",
+      "emoji": "🥄",
+      "criteria": {
+        "type": "first_serving_method",
+        "serving_method": "preloaded_spoon"
+      },
+      "celebration_message": "Utensil skills emerging!"
+    },
+    {
+      "id": "omega_brain",
+      "slug": "omega-brain",
+      "name": "Omega Brain",
+      "description": "Tried 3 different omega-3 rich foods (fish, seeds)",
+      "emoji": "🧠",
+      "criteria": {
+        "type": "foods_with_tag",
+        "tag": "omega_3_rich",
+        "value": 3
+      },
+      "celebration_message": "Brain food champion! 🧠"
+    },
+    {
+      "id": "sea_explorer",
+      "slug": "sea-explorer",
+      "name": "Sea Explorer",
+      "description": "Tried 3 different types of fish or shellfish",
+      "emoji": "🐟",
+      "criteria": {
+        "type": "allergen_type_variety",
+        "allergen_type": ["fish", "shellfish"],
+        "value": 3
+      },
+      "celebration_message": "From sea to spoon!"
+    },
+    {
+      "id": "texture_explorer",
+      "slug": "texture-explorer",
+      "name": "Texture Explorer",
+      "description": "Used all 5 serving methods (stick, mashed, bite-sized, preloaded spoon, whole)",
+      "emoji": "🎨",
+      "criteria": {
+        "type": "unique_serving_methods",
+        "value": 5
+      },
+      "celebration_message": "A texture adventurer!"
+    },
+    {
+      "id": "favorite_found",
+      "slug": "favorite-found",
+      "name": "Favorite Found",
+      "description": "Logged 'loved it' response 5 times for the same food",
+      "emoji": "❤️",
+      "criteria": {
+        "type": "same_food_loved_count",
+        "value": 5
+      },
+      "celebration_message": "Found a true favorite!"
+    },
+    {
+      "id": "month_one",
+      "slug": "month-one",
+      "name": "Month One Complete",
+      "description": "One month of solid food journey!",
+      "emoji": "🗓️",
+      "criteria": {
+        "type": "days_since_first_log",
+        "value": 30
+      },
+      "celebration_message": "30 days of feeding adventures! 🎂"
+    }
+  ]
+}

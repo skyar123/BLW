@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply bg-cream text-charcoal font-sans antialiased;
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Mobile-first responsive design */
+html {
+  @apply text-base;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-sage-400 ring-offset-2;
+}
