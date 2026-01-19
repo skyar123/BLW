@@ -6,7 +6,9 @@ import { ResponsePicker } from './ResponsePicker';
 import { ServingMethodPicker } from './ServingMethodPicker';
 import { useBabiesFirestore } from '../../hooks/useBabiesFirestore';
 import { useFeedingLogsFirestore } from '../../hooks/useFeedingLogsFirestore';
-import type { Food, ServingMethod, FeedingResponse, MealTime } from '../../types';
+import { useBadges } from '../../hooks/useBadges';
+import { BadgeCelebration } from '../Badges/BadgeCelebration';
+import type { Food, ServingMethod, FeedingResponse, MealTime, Badge } from '../../types';
 import { MEAL_TIME_LABELS, RESPONSE_EMOJIS } from '../../types';
 import foodsData from '../../data/foods.json';
 
@@ -20,6 +22,11 @@ export function LogEntry({ preselectedBabyId, onComplete }: LogEntryProps) {
   const [searchParams] = useSearchParams();
   const { babies } = useBabiesFirestore();
   const { addLog, isFirstTimeFood } = useFeedingLogsFirestore();
+
+  // Badge state - track the first selected baby for badge checking
+  const [badgeCheckBabyId, setBadgeCheckBabyId] = useState<string | undefined>();
+  const { checkForNewBadges, newlyEarnedBadge, dismissCelebration } = useBadges(badgeCheckBabyId);
+  const [celebratingBadge, setCelebratingBadge] = useState<Badge | null>(null);
 
   // Check for preselected food from URL
   const preselectedFoodId = searchParams.get('food');
@@ -131,11 +138,32 @@ export function LogEntry({ preselectedBabyId, onComplete }: LogEntryProps) {
 
       setFirstTimeNames(firstTimers);
       setShowSuccess(true);
+
+      // Set the first baby for badge checking and trigger check
+      if (selectedBabyIds.length > 0) {
+        setBadgeCheckBabyId(selectedBabyIds[0]);
+        // Small delay to let Firestore sync, then check badges
+        setTimeout(() => {
+          checkForNewBadges();
+        }, 500);
+      }
     } catch (error) {
       console.error('Failed to log food:', error);
     } finally {
       setSubmitting(false);
     }
+  };
+
+  // Watch for newly earned badges
+  useEffect(() => {
+    if (newlyEarnedBadge && !celebratingBadge) {
+      setCelebratingBadge(newlyEarnedBadge);
+    }
+  }, [newlyEarnedBadge, celebratingBadge]);
+
+  const handleBadgeDismiss = () => {
+    setCelebratingBadge(null);
+    dismissCelebration();
   };
 
   const handleDone = () => {
@@ -162,25 +190,32 @@ export function LogEntry({ preselectedBabyId, onComplete }: LogEntryProps) {
   if (showSuccess) {
     const foodName = selectedFood?.name || customFoodName;
     return (
-      <Card padding="lg" className="text-center">
-        <div className="text-6xl mb-4">{firstTimeNames.length > 0 ? '🎉' : '✅'}</div>
-        <h2 className="text-2xl font-bold text-charcoal mb-2">
-          {firstTimeNames.length > 0 ? 'First Time!' : 'Logged!'}
-        </h2>
-        <p className="text-gray-600 mb-6">
-          {firstTimeNames.length > 0
-            ? `${foodName} is a new first for ${firstTimeNames.join(' & ')}!`
-            : `${foodName} logged successfully`}
-        </p>
-        <div className="space-y-3">
-          <Button onClick={handleLogAnother} variant="primary" className="w-full">
-            Log Another Food
-          </Button>
-          <Button onClick={handleDone} variant="ghost" className="w-full">
-            Done
-          </Button>
-        </div>
-      </Card>
+      <>
+        <Card padding="lg" className="text-center">
+          <div className="text-6xl mb-4">{firstTimeNames.length > 0 ? '🎉' : '✅'}</div>
+          <h2 className="text-2xl font-bold text-charcoal mb-2">
+            {firstTimeNames.length > 0 ? 'First Time!' : 'Logged!'}
+          </h2>
+          <p className="text-gray-600 mb-6">
+            {firstTimeNames.length > 0
+              ? `${foodName} is a new first for ${firstTimeNames.join(' & ')}!`
+              : `${foodName} logged successfully`}
+          </p>
+          <div className="space-y-3">
+            <Button onClick={handleLogAnother} variant="primary" className="w-full">
+              Log Another Food
+            </Button>
+            <Button onClick={handleDone} variant="ghost" className="w-full">
+              Done
+            </Button>
+          </div>
+        </Card>
+
+        {/* Badge Celebration Modal */}
+        {celebratingBadge && (
+          <BadgeCelebration badge={celebratingBadge} onDismiss={handleBadgeDismiss} />
+        )}
+      </>
     );
   }
 

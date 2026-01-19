@@ -10,6 +10,8 @@ import {
   AllergenTrackerPage,
   LoginPage,
   FamilySettingsPage,
+  BadgesPage,
+  ProgressPage,
 } from './pages';
 
 // Loading spinner component
@@ -137,6 +139,38 @@ function AppRoutes() {
         element={
           <ProtectedRoute>
             <FamilySettingsPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/badges"
+        element={
+          <ProtectedRoute>
+            <BadgesPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/badges/:babyId"
+        element={
+          <ProtectedRoute>
+            <BadgesPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/progress"
+        element={
+          <ProtectedRoute>
+            <ProgressPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/progress/:babyId"
+        element={
+          <ProtectedRoute>
+            <ProgressPage />
           </ProtectedRoute>
         }
       />

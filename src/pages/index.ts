@@ -7,3 +7,5 @@ export { LogDetailPage } from './LogDetailPage';
 export { AllergenTrackerPage } from './AllergenTrackerPage';
 export { LoginPage } from './LoginPage';
 export { FamilySettingsPage } from './FamilySettingsPage';
+export { BadgesPage } from './BadgesPage';
+export { ProgressPage } from './ProgressPage';

@@ -5,6 +5,10 @@ import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
 import { useFeedingLogsFirestore } from '../hooks/useFeedingLogsFirestore';
 import { useAuth } from '../context/AuthContext';
 import { useFamily } from '../hooks/useFamily';
+import { useBadges } from '../hooks/useBadges';
+import { useUniqueFoods } from '../hooks/useUniqueFoods';
+import { FoodsChallenge } from '../components/Progress/FoodsChallenge';
+import { BadgeCelebration } from '../components/Badges/BadgeCelebration';
 import foodsData from '../data/foods.json';
 import type { Baby } from '../types';
 import { RESPONSE_EMOJIS } from '../types';
@@ -14,10 +18,14 @@ export function Dashboard() {
   const { user } = useAuth();
   const { family, loading: familyLoading } = useFamily();
   const { babies, hasBabies, loading: babiesLoading } = useBabiesFirestore();
-  const { getTodaysLogs, getRecentLogs, totalLogs, loading: logsLoading } = useFeedingLogsFirestore();
+  const { getTodaysLogs, totalLogs, loading: logsLoading } = useFeedingLogsFirestore();
+
+  // Use first baby for badges/progress (user can switch on detail pages)
+  const firstBabyId = babies[0]?.id;
+  const { stats: badgeStats, newlyEarnedBadge, dismissCelebration } = useBadges(firstBabyId);
+  const { totalUnique } = useUniqueFoods(firstBabyId);
 
   const todaysLogs = getTodaysLogs();
-  const recentLogs = getRecentLogs(5);
 
   const handleBabyClick = (baby: Baby) => {
     navigate(`/babies/${baby.id}`);
@@ -197,6 +205,40 @@ export function Dashboard() {
           />
         </div>
 
+        {/* Progress & Badges Quick Links */}
+        {firstBabyId && (
+          <div className="grid grid-cols-2 gap-3">
+            {/* 100 Foods Progress */}
+            <Link to={`/progress/${firstBabyId}`}>
+              <Card padding="md" className="h-full hover:shadow-md transition-shadow">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-sage-600">{totalUnique}</div>
+                  <div className="text-xs text-gray-500">/ 100 Foods</div>
+                  <div className="mt-2 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-sage-500 rounded-full transition-all"
+                      style={{ width: `${Math.min(totalUnique, 100)}%` }}
+                    />
+                  </div>
+                </div>
+              </Card>
+            </Link>
+
+            {/* Badges */}
+            <Link to={`/badges/${firstBabyId}`}>
+              <Card padding="md" className="h-full hover:shadow-md transition-shadow">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-amber-500">{badgeStats.earnedCount}</div>
+                  <div className="text-xs text-gray-500">/ {badgeStats.totalCount} Badges</div>
+                  <div className="mt-2 flex justify-center">
+                    <span className="text-xl">🏆</span>
+                  </div>
+                </div>
+              </Card>
+            </Link>
+          </div>
+        )}
+
         {/* Allergen Tracker */}
         <Card padding="md" className="bg-coral-50 border-coral-200">
           <Link to="/allergens" className="flex items-center justify-between">
@@ -213,20 +255,25 @@ export function Dashboard() {
           </Link>
         </Card>
 
+        {/* 100 Foods Challenge (compact) */}
+        {firstBabyId && <FoodsChallenge babyId={firstBabyId} compact />}
+
         {/* Stats */}
         {totalLogs > 0 && (
           <Card padding="md">
             <h2 className="font-semibold text-charcoal mb-3">Journey Stats</h2>
-            <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="grid grid-cols-4 gap-3 text-center">
               <div>
                 <div className="text-2xl font-bold text-sage-600">{totalLogs}</div>
-                <div className="text-xs text-gray-500">Total Logs</div>
+                <div className="text-xs text-gray-500">Logs</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-coral-500">
-                  {recentLogs.filter((l) => l.isFirstTime).length}
-                </div>
-                <div className="text-xs text-gray-500">Firsts</div>
+                <div className="text-2xl font-bold text-coral-500">{totalUnique}</div>
+                <div className="text-xs text-gray-500">Foods</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-amber-500">{badgeStats.earnedCount}</div>
+                <div className="text-xs text-gray-500">Badges</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-sage-600">
@@ -236,6 +283,11 @@ export function Dashboard() {
               </div>
             </div>
           </Card>
+        )}
+
+        {/* Badge Celebration Modal */}
+        {newlyEarnedBadge && (
+          <BadgeCelebration badge={newlyEarnedBadge} onDismiss={dismissCelebration} />
         )}
       </div>
     </div>
