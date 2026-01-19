@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  # Firebase API keys are public by design (security is handled by Firebase Security Rules)
+  # This tells Netlify's secrets scanner to ignore the Firebase API key pattern
+  SECRETS_SCAN_SMART_DETECTION_OMIT_VALUES = "AIzaSyAQt9a5l9m4iYyyBT-Zf8V53cJX-lYgqEs"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
