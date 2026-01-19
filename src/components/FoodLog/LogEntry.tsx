@@ -4,8 +4,8 @@ import { Button, Card } from '../ui';
 import { FoodSearch } from './FoodSearch';
 import { ResponsePicker } from './ResponsePicker';
 import { ServingMethodPicker } from './ServingMethodPicker';
-import { useBabies } from '../../hooks/useBabies';
-import { useFeedingLogs, type AddLogInput } from '../../hooks/useFeedingLogs';
+import { useBabiesFirestore } from '../../hooks/useBabiesFirestore';
+import { useFeedingLogsFirestore } from '../../hooks/useFeedingLogsFirestore';
 import type { Food, ServingMethod, FeedingResponse, MealTime } from '../../types';
 import { MEAL_TIME_LABELS, RESPONSE_EMOJIS } from '../../types';
 import foodsData from '../../data/foods.json';
@@ -18,8 +18,8 @@ interface LogEntryProps {
 export function LogEntry({ preselectedBabyId, onComplete }: LogEntryProps) {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const { babies } = useBabies();
-  const { addLog, isFirstTimeFood } = useFeedingLogs();
+  const { babies } = useBabiesFirestore();
+  const { addLog, isFirstTimeFood } = useFeedingLogsFirestore();
 
   // Check for preselected food from URL
   const preselectedFoodId = searchParams.get('food');
@@ -44,6 +44,7 @@ export function LogEntry({ preselectedBabyId, onComplete }: LogEntryProps) {
   const [notes, setNotes] = useState('');
   const [showSuccess, setShowSuccess] = useState(false);
   const [firstTimeNames, setFirstTimeNames] = useState<string[]>([]);
+  const [_submitting, setSubmitting] = useState(false);
 
   // Update selected food if URL param changes
   useEffect(() => {
@@ -99,37 +100,42 @@ export function LogEntry({ preselectedBabyId, onComplete }: LogEntryProps) {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!canSubmit()) return;
 
+    setSubmitting(true);
     const firstTimers: string[] = [];
 
-    // Create individual logs for each baby
-    selectedBabyIds.forEach((babyId) => {
-      const response = useSameResponse ? sharedResponse! : responses[babyId];
-      const isFirst = isFirstTimeFood(babyId, selectedFood?.id, customFoodName);
+    try {
+      // Create individual logs for each baby
+      for (const babyId of selectedBabyIds) {
+        const response = useSameResponse ? sharedResponse! : responses[babyId];
+        const isFirst = isFirstTimeFood(babyId, selectedFood?.id, customFoodName);
 
-      if (isFirst) {
-        const baby = babies.find((b) => b.id === babyId);
-        if (baby) firstTimers.push(baby.name);
+        if (isFirst) {
+          const baby = babies.find((b) => b.id === babyId);
+          if (baby) firstTimers.push(baby.name);
+        }
+
+        await addLog({
+          babyId,
+          foodId: selectedFood?.id,
+          customFoodName: customFoodName || undefined,
+          servingMethod: servingMethods[0], // Primary method
+          servingMethods: servingMethods.length > 1 ? servingMethods : undefined,
+          response,
+          mealTime,
+          notes: notes.trim() || undefined,
+        });
       }
 
-      const logData: AddLogInput = {
-        babyId,
-        foodId: selectedFood?.id,
-        customFoodName: customFoodName || undefined,
-        servingMethod: servingMethods[0], // Primary method
-        servingMethods: servingMethods.length > 1 ? servingMethods : undefined,
-        response,
-        mealTime,
-        notes: notes.trim() || undefined,
-      };
-
-      addLog(logData);
-    });
-
-    setFirstTimeNames(firstTimers);
-    setShowSuccess(true);
+      setFirstTimeNames(firstTimers);
+      setShowSuccess(true);
+    } catch (error) {
+      console.error('Failed to log food:', error);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleDone = () => {

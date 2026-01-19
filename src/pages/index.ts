@@ -5,3 +5,5 @@ export { LogFoodPage } from './LogFoodPage';
 export { FoodDetailPage } from './FoodDetailPage';
 export { LogDetailPage } from './LogDetailPage';
 export { AllergenTrackerPage } from './AllergenTrackerPage';
+export { LoginPage } from './LoginPage';
+export { FamilySettingsPage } from './FamilySettingsPage';

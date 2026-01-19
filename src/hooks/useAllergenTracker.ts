@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useLocalStorage, STORAGE_KEYS } from './useLocalStorage';
-import { useFeedingLogs } from './useFeedingLogs';
+import { useFeedingLogsFirestore } from './useFeedingLogsFirestore';
 import type { AllergenTracker, AllergenType, ReactionSeverity, FeedingLog } from '../types';
 import { TOP_9_ALLERGENS } from '../types';
 import foodsData from '../data/foods.json';
@@ -30,7 +30,7 @@ export function useAllergenTracker() {
     STORAGE_KEYS.ALLERGEN_TRACKERS || 'first-bites-allergen-trackers',
     []
   );
-  const { logs } = useFeedingLogs();
+  const { logs } = useFeedingLogsFirestore();
 
   // Get foods that are allergens
   const allergenFoods = useMemo(() => {

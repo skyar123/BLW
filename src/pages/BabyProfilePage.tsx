@@ -1,18 +1,29 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { BabyCard } from '../components/BabyProfile';
 import { Button, Card } from '../components/ui';
-import { useBabies } from '../hooks/useBabies';
-import { useFeedingLogs } from '../hooks/useFeedingLogs';
+import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
+import { useFeedingLogsFirestore } from '../hooks/useFeedingLogsFirestore';
 import { formatBabyAgeDisplay, getPhaseLabel } from '../utils/ageCalculations';
 import foodsData from '../data/foods.json';
 
 export function BabyProfilePage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const { getBabyById } = useBabies();
-  const { getLogsForBaby, getUniqueFoodsForBaby } = useFeedingLogs();
+  const { getBabyById, loading: babiesLoading } = useBabiesFirestore();
+  const { getLogsForBaby, getUniqueFoodsForBaby, loading: logsLoading } = useFeedingLogsFirestore();
 
   const baby = id ? getBabyById(id) : undefined;
+
+  if (babiesLoading || logsLoading) {
+    return (
+      <div className="min-h-screen bg-cream flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-6xl mb-4 animate-bounce">🥑</div>
+          <p className="text-gray-500">Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   if (!baby) {
     return (

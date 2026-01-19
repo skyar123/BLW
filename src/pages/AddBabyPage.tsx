@@ -1,15 +1,19 @@
 import { useNavigate } from 'react-router-dom';
 import { BabyForm } from '../components/BabyProfile';
-import { useBabies } from '../hooks/useBabies';
+import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
 
 export function AddBabyPage() {
   const navigate = useNavigate();
-  const { addBaby } = useBabies();
+  const { addBaby } = useBabiesFirestore();
 
-  const handleSubmit = (data: Parameters<typeof addBaby>[0]) => {
-    const newBaby = addBaby(data);
-    // Navigate to dashboard or baby profile after adding
-    navigate(`/babies/${newBaby.id}`);
+  const handleSubmit = async (data: Parameters<typeof addBaby>[0]) => {
+    try {
+      const newBaby = await addBaby(data);
+      // Navigate to dashboard or baby profile after adding
+      navigate(`/babies/${newBaby.id}`);
+    } catch (error) {
+      console.error('Failed to add baby:', error);
+    }
   };
 
   const handleCancel = () => {

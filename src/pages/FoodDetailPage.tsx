@@ -1,7 +1,7 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useMemo } from 'react';
 import { Button, Card, VideoLinkCard } from '../components/ui';
-import { useBabies } from '../hooks/useBabies';
+import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
 import { getCorrectedAgeDecimal, getCurrentPhase } from '../utils/ageCalculations';
 import type { Food, Phase } from '../types';
 import foodsData from '../data/foods.json';
@@ -32,7 +32,7 @@ const IRON_COLORS: Record<string, string> = {
 export function FoodDetailPage() {
   const { foodId } = useParams<{ foodId: string }>();
   const navigate = useNavigate();
-  const { babies } = useBabies();
+  const { babies } = useBabiesFirestore();
 
   const foods = foodsData.foods as Food[];
   const food = useMemo(() => foods.find((f) => f.id === foodId), [foods, foodId]);

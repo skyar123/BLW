@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Button, Card } from '../components/ui';
-import { useBabies } from '../hooks/useBabies';
+import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
 import { useAllergenTracker, type AllergenStatus } from '../hooks/useAllergenTracker';
 import type { AllergenType, ReactionSeverity } from '../types';
 import { ALLERGEN_LABELS } from '../types';
@@ -34,7 +34,7 @@ const URGENCY_COLORS: Record<AllergenStatus['maintenanceUrgency'], string> = {
 
 export function AllergenTrackerPage() {
   const navigate = useNavigate();
-  const { babies } = useBabies();
+  const { babies } = useBabiesFirestore();
   const {
     getAllAllergenStatuses,
     getMaintenanceReminders,

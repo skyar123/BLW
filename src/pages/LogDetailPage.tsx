@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { Button, Card } from '../components/ui';
 import { ResponsePicker } from '../components/FoodLog/ResponsePicker';
 import { ServingMethodPicker } from '../components/FoodLog/ServingMethodPicker';
-import { useFeedingLogs } from '../hooks/useFeedingLogs';
-import { useBabies } from '../hooks/useBabies';
+import { useFeedingLogsFirestore } from '../hooks/useFeedingLogsFirestore';
+import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
 import type { Food, ServingMethod, FeedingResponse, MealTime } from '../types';
 import {
   RESPONSE_EMOJIS,
@@ -17,8 +17,8 @@ import foodsData from '../data/foods.json';
 export function LogDetailPage() {
   const { logId } = useParams<{ logId: string }>();
   const navigate = useNavigate();
-  const { getLogById, updateLog, deleteLog } = useFeedingLogs();
-  const { babies } = useBabies();
+  const { getLogById, updateLog, deleteLog, loading: logsLoading } = useFeedingLogsFirestore();
+  const { babies, loading: babiesLoading } = useBabiesFirestore();
 
   const log = logId ? getLogById(logId) : undefined;
   const baby = log ? babies.find((b) => b.id === log.babyId) : undefined;
@@ -35,6 +35,17 @@ export function LogDetailPage() {
   const [editNotes, setEditNotes] = useState(log?.notes || '');
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
 
+  if (logsLoading || babiesLoading) {
+    return (
+      <div className="min-h-screen bg-cream flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-6xl mb-4 animate-bounce">🥑</div>
+          <p className="text-gray-500">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   if (!log) {
     return (
       <div className="min-h-screen bg-cream p-4">
@@ -48,22 +59,30 @@ export function LogDetailPage() {
     );
   }
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (!editResponse || editMethods.length === 0) return;
 
-    updateLog(log.id, {
-      response: editResponse,
-      servingMethod: editMethods[0],
-      servingMethods: editMethods.length > 1 ? editMethods : undefined,
-      mealTime: editMealTime,
-      notes: editNotes.trim() || undefined,
-    });
-    setIsEditing(false);
+    try {
+      await updateLog(log.id, {
+        response: editResponse,
+        servingMethod: editMethods[0],
+        servingMethods: editMethods.length > 1 ? editMethods : undefined,
+        mealTime: editMealTime,
+        notes: editNotes.trim() || undefined,
+      });
+      setIsEditing(false);
+    } catch (error) {
+      console.error('Failed to save:', error);
+    }
   };
 
-  const handleDelete = () => {
-    deleteLog(log.id);
-    navigate('/');
+  const handleDelete = async () => {
+    try {
+      await deleteLog(log.id);
+      navigate('/');
+    } catch (error) {
+      console.error('Failed to delete:', error);
+    }
   };
 
   const foodName = food?.name || log.customFoodName || 'Unknown food';

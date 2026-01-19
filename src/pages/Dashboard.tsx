@@ -1,16 +1,20 @@
 import { useNavigate, Link } from 'react-router-dom';
 import { Button, Card } from '../components/ui';
 import { BabyList } from '../components/BabyProfile';
-import { useBabies } from '../hooks/useBabies';
-import { useFeedingLogs } from '../hooks/useFeedingLogs';
+import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
+import { useFeedingLogsFirestore } from '../hooks/useFeedingLogsFirestore';
+import { useAuth } from '../context/AuthContext';
+import { useFamily } from '../hooks/useFamily';
 import foodsData from '../data/foods.json';
 import type { Baby } from '../types';
 import { RESPONSE_EMOJIS } from '../types';
 
 export function Dashboard() {
   const navigate = useNavigate();
-  const { babies, hasBabies } = useBabies();
-  const { getTodaysLogs, getRecentLogs, totalLogs } = useFeedingLogs();
+  const { user } = useAuth();
+  const { family, loading: familyLoading } = useFamily();
+  const { babies, hasBabies, loading: babiesLoading } = useBabiesFirestore();
+  const { getTodaysLogs, getRecentLogs, totalLogs, loading: logsLoading } = useFeedingLogsFirestore();
 
   const todaysLogs = getTodaysLogs();
   const recentLogs = getRecentLogs(5);
@@ -19,23 +23,63 @@ export function Dashboard() {
     navigate(`/babies/${baby.id}`);
   };
 
+  // Show loading state while data is being fetched
+  if (familyLoading || babiesLoading || logsLoading) {
+    return (
+      <div className="min-h-screen bg-cream flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-6xl mb-4 animate-bounce">🥑</div>
+          <p className="text-gray-500">Loading your family's data...</p>
+        </div>
+      </div>
+    );
+  }
+
   // Welcome screen for new users
   if (!hasBabies) {
     return (
-      <div className="min-h-screen bg-cream flex items-center justify-center p-4">
-        <Card padding="lg" className="max-w-md text-center">
-          <div className="text-6xl mb-4">🥑</div>
-          <h1 className="text-3xl font-bold text-charcoal mb-2">
-            First Bites
-          </h1>
-          <p className="text-gray-600 mb-6">
-            Your baby-led weaning journal. Track firsts, celebrate progress,
-            and remember every messy, magical moment.
-          </p>
-          <Button onClick={() => navigate('/babies/new')} size="lg" className="w-full">
-            Add Your Baby
-          </Button>
-        </Card>
+      <div className="min-h-screen bg-cream">
+        {/* Header with user info */}
+        <div className="bg-sage-400 text-white p-4">
+          <div className="max-w-lg mx-auto flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold">First Bites</h1>
+              <p className="text-sage-100 text-sm">{family?.name}</p>
+            </div>
+            <Link
+              to="/settings/family"
+              className="p-2 hover:bg-sage-500 rounded-full transition-colors"
+            >
+              {user?.photoURL ? (
+                <img
+                  src={user.photoURL}
+                  alt={user.displayName || 'User'}
+                  className="w-8 h-8 rounded-full"
+                />
+              ) : (
+                <div className="w-8 h-8 rounded-full bg-sage-300 flex items-center justify-center">
+                  <span>👤</span>
+                </div>
+              )}
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center p-4" style={{ minHeight: 'calc(100vh - 80px)' }}>
+          <Card padding="lg" className="max-w-md text-center">
+            <div className="text-6xl mb-4">🥑</div>
+            <h1 className="text-3xl font-bold text-charcoal mb-2">
+              Welcome to First Bites!
+            </h1>
+            <p className="text-gray-600 mb-6">
+              Your family's baby-led weaning journal. Track firsts, celebrate progress,
+              and remember every messy, magical moment.
+            </p>
+            <Button onClick={() => navigate('/babies/new')} size="lg" className="w-full">
+              Add Your Baby
+            </Button>
+          </Card>
+        </div>
       </div>
     );
   }
@@ -45,8 +89,29 @@ export function Dashboard() {
       {/* Header */}
       <div className="bg-sage-400 text-white p-4 pb-8">
         <div className="max-w-lg mx-auto">
-          <h1 className="text-2xl font-bold">First Bites</h1>
-          <p className="text-sage-100 text-sm mt-1">
+          <div className="flex items-center justify-between mb-2">
+            <div>
+              <h1 className="text-2xl font-bold">First Bites</h1>
+              <p className="text-sage-100 text-sm">{family?.name}</p>
+            </div>
+            <Link
+              to="/settings/family"
+              className="p-2 hover:bg-sage-500 rounded-full transition-colors"
+            >
+              {user?.photoURL ? (
+                <img
+                  src={user.photoURL}
+                  alt={user.displayName || 'User'}
+                  className="w-8 h-8 rounded-full"
+                />
+              ) : (
+                <div className="w-8 h-8 rounded-full bg-sage-300 flex items-center justify-center">
+                  <span>👤</span>
+                </div>
+              )}
+            </Link>
+          </div>
+          <p className="text-sage-100 text-sm">
             {new Date().toLocaleDateString('en-US', {
               weekday: 'long',
               month: 'long',
