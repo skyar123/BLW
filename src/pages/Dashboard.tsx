@@ -1,5 +1,6 @@
 import { useNavigate, Link } from 'react-router-dom';
 import { Button, Card } from '../components/ui';
+import { ThemeToggle } from '../components/ui/ThemeToggle';
 import { BabyList } from '../components/BabyProfile';
 import { useBabiesFirestore } from '../hooks/useBabiesFirestore';
 import { useFeedingLogsFirestore } from '../hooks/useFeedingLogsFirestore';
@@ -7,8 +8,12 @@ import { useAuth } from '../context/AuthContext';
 import { useFamily } from '../hooks/useFamily';
 import { useBadges } from '../hooks/useBadges';
 import { useUniqueFoods } from '../hooks/useUniqueFoods';
+import { useStreaks } from '../hooks/useStreaks';
 import { FoodsChallenge } from '../components/Progress/FoodsChallenge';
 import { BadgeCelebration } from '../components/Badges/BadgeCelebration';
+import { MealSuggestions } from '../components/MealSuggestions';
+import { OnboardingTour, useOnboarding } from '../components/Onboarding';
+import { exportAndDownload } from '../utils/exportData';
 import foodsData from '../data/foods.json';
 import type { Baby } from '../types';
 import { RESPONSE_EMOJIS } from '../types';
@@ -24,8 +29,15 @@ export function Dashboard() {
   const firstBabyId = babies[0]?.id;
   const { stats: badgeStats, newlyEarnedBadge, dismissCelebration } = useBadges(firstBabyId);
   const { totalUnique } = useUniqueFoods(firstBabyId);
+  const { currentStreak, isActiveToday } = useStreaks(firstBabyId);
+  const { showOnboarding, completeOnboarding } = useOnboarding();
+  const { logs } = useFeedingLogsFirestore();
 
   const todaysLogs = getTodaysLogs();
+
+  const handleExport = () => {
+    exportAndDownload(logs, babies);
+  };
 
   const handleBabyClick = (baby: Baby) => {
     navigate(`/babies/${baby.id}`);
@@ -102,22 +114,25 @@ export function Dashboard() {
               <h1 className="text-2xl font-bold">First Bites</h1>
               <p className="text-sage-100 text-sm">{family?.name}</p>
             </div>
-            <Link
-              to="/settings/family"
-              className="p-2 hover:bg-sage-500 rounded-full transition-colors"
-            >
-              {user?.photoURL ? (
-                <img
-                  src={user.photoURL}
-                  alt={user.displayName || 'User'}
-                  className="w-8 h-8 rounded-full"
-                />
-              ) : (
-                <div className="w-8 h-8 rounded-full bg-sage-300 flex items-center justify-center">
-                  <span>👤</span>
-                </div>
-              )}
-            </Link>
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <Link
+                to="/settings/family"
+                className="p-2 hover:bg-sage-500 rounded-full transition-colors"
+              >
+                {user?.photoURL ? (
+                  <img
+                    src={user.photoURL}
+                    alt={user.displayName || 'User'}
+                    className="w-8 h-8 rounded-full"
+                  />
+                ) : (
+                  <div className="w-8 h-8 rounded-full bg-sage-300 flex items-center justify-center">
+                    <span>👤</span>
+                  </div>
+                )}
+              </Link>
+            </div>
           </div>
           <p className="text-sage-100 text-sm">
             {new Date().toLocaleDateString('en-US', {
@@ -258,37 +273,71 @@ export function Dashboard() {
         {/* 100 Foods Challenge (compact) */}
         {firstBabyId && <FoodsChallenge babyId={firstBabyId} compact />}
 
-        {/* Stats */}
+        {/* Stats with Streak */}
         {totalLogs > 0 && (
           <Card padding="md">
-            <h2 className="font-semibold text-charcoal mb-3">Journey Stats</h2>
-            <div className="grid grid-cols-4 gap-3 text-center">
+            <h2 className="font-semibold text-charcoal dark:text-white mb-3">Journey Stats</h2>
+            <div className="grid grid-cols-5 gap-2 text-center">
               <div>
-                <div className="text-2xl font-bold text-sage-600">{totalLogs}</div>
-                <div className="text-xs text-gray-500">Logs</div>
+                <div className="text-xl font-bold text-sage-600">{totalLogs}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Logs</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-coral-500">{totalUnique}</div>
-                <div className="text-xs text-gray-500">Foods</div>
+                <div className="text-xl font-bold text-coral-500">{totalUnique}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Foods</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-amber-500">{badgeStats.earnedCount}</div>
-                <div className="text-xs text-gray-500">Badges</div>
+                <div className="text-xl font-bold text-amber-500">{badgeStats.earnedCount}</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Badges</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-sage-600">
+                <div className={`text-xl font-bold ${isActiveToday ? 'text-orange-500' : 'text-gray-400'}`}>
+                  {currentStreak}🔥
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Streak</div>
+              </div>
+              <div>
+                <div className="text-xl font-bold text-sage-600">
                   {todaysLogs.length}
                 </div>
-                <div className="text-xs text-gray-500">Today</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Today</div>
               </div>
             </div>
           </Card>
         )}
 
+        {/* Meal Suggestions */}
+        {firstBabyId && <MealSuggestions babyId={firstBabyId} limit={3} />}
+
+        {/* Quick Links - Growth, Shopping, Export */}
+        <div className="grid grid-cols-3 gap-3">
+          <Link to="/growth">
+            <Card padding="sm" className="text-center hover:shadow-md transition-shadow">
+              <span className="text-2xl">📏</span>
+              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Growth</p>
+            </Card>
+          </Link>
+          <Link to="/shopping">
+            <Card padding="sm" className="text-center hover:shadow-md transition-shadow">
+              <span className="text-2xl">🛒</span>
+              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Shopping</p>
+            </Card>
+          </Link>
+          <button onClick={handleExport}>
+            <Card padding="sm" className="text-center hover:shadow-md transition-shadow w-full">
+              <span className="text-2xl">📤</span>
+              <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">Export</p>
+            </Card>
+          </button>
+        </div>
+
         {/* Badge Celebration Modal */}
         {newlyEarnedBadge && (
           <BadgeCelebration badge={newlyEarnedBadge} onDismiss={dismissCelebration} />
         )}
+
+        {/* Onboarding Tour */}
+        {showOnboarding && <OnboardingTour onComplete={completeOnboarding} />}
       </div>
     </div>
   );

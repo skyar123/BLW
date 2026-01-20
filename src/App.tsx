@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { ThemeProvider } from './context/ThemeContext';
 import {
   Dashboard,
   AddBabyPage,
@@ -12,6 +13,8 @@ import {
   FamilySettingsPage,
   BadgesPage,
   ProgressPage,
+  GrowthPage,
+  ShoppingListPage,
 } from './pages';
 
 // Loading spinner component
@@ -174,6 +177,30 @@ function AppRoutes() {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/growth"
+        element={
+          <ProtectedRoute>
+            <GrowthPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/growth/:babyId"
+        element={
+          <ProtectedRoute>
+            <GrowthPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/shopping"
+        element={
+          <ProtectedRoute>
+            <ShoppingListPage />
+          </ProtectedRoute>
+        }
+      />
 
       {/* Fallback - redirect to home */}
       <Route path="*" element={<Navigate to="/" replace />} />
@@ -183,11 +210,13 @@ function AppRoutes() {
 
 function App() {
   return (
-    <AuthProvider>
-      <BrowserRouter>
-        <AppRoutes />
-      </BrowserRouter>
-    </AuthProvider>
+    <ThemeProvider>
+      <AuthProvider>
+        <BrowserRouter>
+          <AppRoutes />
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 

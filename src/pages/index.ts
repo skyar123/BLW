@@ -9,3 +9,5 @@ export { LoginPage } from './LoginPage';
 export { FamilySettingsPage } from './FamilySettingsPage';
 export { BadgesPage } from './BadgesPage';
 export { ProgressPage } from './ProgressPage';
+export { GrowthPage } from './GrowthPage';
+export { ShoppingListPage } from './ShoppingListPage';
