@@ -4,9 +4,15 @@
 
 /* Base styles */
 body {
-  @apply bg-cream text-charcoal font-sans antialiased;
+  @apply bg-cream dark:bg-gray-900 text-charcoal dark:text-gray-100 font-sans antialiased;
   margin: 0;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode transition */
+html.dark {
+  color-scheme: dark;
 }
 
 /* Mobile-first responsive design */
@@ -21,5 +27,12 @@ html {
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  @apply outline-none ring-2 ring-sage-400 ring-offset-2;
+  @apply outline-none ring-2 ring-sage-400 ring-offset-2 dark:ring-offset-gray-900;
+}
+
+/* Dark mode input styles */
+.dark input,
+.dark textarea,
+.dark select {
+  color-scheme: dark;
 }

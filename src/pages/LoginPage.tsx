@@ -21,13 +21,13 @@ export function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-cream flex items-center justify-center p-4">
+    <div className="min-h-screen bg-cream dark:bg-gray-900 flex items-center justify-center p-4">
       <Card padding="lg" className="max-w-md w-full text-center">
         {/* Logo & Branding */}
         <div className="mb-8">
           <div className="text-6xl mb-4">🥑</div>
-          <h1 className="text-3xl font-bold text-charcoal mb-2">First Bites</h1>
-          <p className="text-gray-600">
+          <h1 className="text-3xl font-bold text-charcoal dark:text-white mb-2">First Bites</h1>
+          <p className="text-gray-600 dark:text-gray-400">
             Your family's baby-led weaning journal
           </p>
         </div>
@@ -36,25 +36,25 @@ export function LoginPage() {
         <div className="mb-8 text-left space-y-3">
           <div className="flex items-center gap-3">
             <span className="text-xl">👨‍👩‍👧‍👦</span>
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               Share with your partner - sync across devices
             </span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xl">📱</span>
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               Log foods on any device, see updates instantly
             </span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xl">🥜</span>
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               Track allergen introductions & maintenance
             </span>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-xl">👶👶</span>
-            <span className="text-sm text-gray-600">
+            <span className="text-sm text-gray-600 dark:text-gray-400">
               Perfect for twins - track each baby's journey
             </span>
           </div>
@@ -62,7 +62,7 @@ export function LoginPage() {
 
         {/* Error Message */}
         {error && (
-          <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+          <div className="mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg text-red-700 dark:text-red-400 text-sm">
             {error}
           </div>
         )}
@@ -102,7 +102,7 @@ export function LoginPage() {
         </Button>
 
         {/* Privacy Note */}
-        <p className="mt-6 text-xs text-gray-400">
+        <p className="mt-6 text-xs text-gray-400 dark:text-gray-500">
           By signing in, you agree to our Terms of Service and Privacy Policy.
           Your data is stored securely and only shared with family members you invite.
         </p>

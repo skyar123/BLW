@@ -16,10 +16,10 @@ export function BabyProfilePage() {
 
   if (babiesLoading || logsLoading) {
     return (
-      <div className="min-h-screen bg-cream flex items-center justify-center">
+      <div className="min-h-screen bg-cream dark:bg-gray-900 flex items-center justify-center">
         <div className="text-center">
           <div className="text-6xl mb-4 animate-bounce">🥑</div>
-          <p className="text-gray-500">Loading...</p>
+          <p className="text-gray-500 dark:text-gray-400">Loading...</p>
         </div>
       </div>
     );
@@ -27,10 +27,10 @@ export function BabyProfilePage() {
 
   if (!baby) {
     return (
-      <div className="min-h-screen bg-cream p-4 flex items-center justify-center">
+      <div className="min-h-screen bg-cream dark:bg-gray-900 p-4 flex items-center justify-center">
         <Card padding="lg" className="text-center">
-          <h2 className="text-xl font-semibold mb-2">Baby not found</h2>
-          <p className="text-gray-500 mb-4">
+          <h2 className="text-xl font-semibold text-charcoal dark:text-white mb-2">Baby not found</h2>
+          <p className="text-gray-500 dark:text-gray-400 mb-4">
             This baby profile doesn't exist.
           </p>
           <Button onClick={() => navigate('/')}>Go Home</Button>
@@ -52,7 +52,7 @@ export function BabyProfilePage() {
   const recentLogs = logs.slice(0, 5);
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-cream dark:bg-gray-900">
       {/* Header */}
       <div className="bg-sage-400 text-white p-4">
         <div className="max-w-lg mx-auto">
@@ -69,26 +69,26 @@ export function BabyProfilePage() {
       </div>
 
       <div className="max-w-lg mx-auto p-4 space-y-6">
-        {/* Baby Card */}
+        {/* Baby Card with Edit Button */}
         <div className="-mt-8">
-          <BabyCard baby={baby} />
+          <BabyCard baby={baby} showEditButton />
         </div>
 
         {/* Quick Stats */}
         <Card padding="md">
-          <h3 className="font-semibold text-charcoal mb-3">Progress</h3>
+          <h3 className="font-semibold text-charcoal dark:text-white mb-3">Progress</h3>
           <div className="grid grid-cols-2 gap-4">
-            <div className="text-center p-3 bg-sage-50 rounded-xl">
-              <div className="text-3xl font-bold text-sage-600">{foodsTriedCount}</div>
-              <div className="text-sm text-gray-500">Foods Tried</div>
+            <div className="text-center p-3 bg-sage-50 dark:bg-sage-900/30 rounded-xl">
+              <div className="text-3xl font-bold text-sage-600 dark:text-sage-400">{foodsTriedCount}</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">Foods Tried</div>
             </div>
-            <div className="text-center p-3 bg-coral-50 rounded-xl">
+            <div className="text-center p-3 bg-coral-50 dark:bg-coral-900/30 rounded-xl">
               <div className="text-3xl font-bold text-coral-500">{percentageTried}%</div>
-              <div className="text-sm text-gray-500">of Database</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">of Database</div>
             </div>
           </div>
           <div className="mt-3">
-            <div className="h-2 bg-sage-100 rounded-full overflow-hidden">
+            <div className="h-2 bg-sage-100 dark:bg-gray-700 rounded-full overflow-hidden">
               <div
                 className="h-full bg-sage-400 rounded-full transition-all duration-500"
                 style={{ width: `${percentageTried}%` }}
@@ -99,9 +99,9 @@ export function BabyProfilePage() {
 
         {/* Phase Info */}
         <Card padding="md">
-          <h3 className="font-semibold text-charcoal mb-2">Current Phase</h3>
-          <p className="text-sage-600 font-medium">{getPhaseLabel(phase)}</p>
-          <p className="text-sm text-gray-500 mt-1">
+          <h3 className="font-semibold text-charcoal dark:text-white mb-2">Current Phase</h3>
+          <p className="text-sage-600 dark:text-sage-400 font-medium">{getPhaseLabel(phase)}</p>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
             {phase === 'phase_1' && 'Thick sticks and wedges for palmar grasp'}
             {phase === 'phase_2' && 'Smaller pieces as pincer grasp develops'}
             {phase === 'phase_3' && 'Self-feeding with variety of textures'}
@@ -111,7 +111,7 @@ export function BabyProfilePage() {
         {/* Recent Activity */}
         <Card padding="md">
           <div className="flex items-center justify-between mb-3">
-            <h3 className="font-semibold text-charcoal">Recent Logs</h3>
+            <h3 className="font-semibold text-charcoal dark:text-white">Recent Logs</h3>
             <Button
               size="sm"
               onClick={() => navigate(`/log/${baby.id}`)}
@@ -121,7 +121,7 @@ export function BabyProfilePage() {
           </div>
 
           {recentLogs.length === 0 ? (
-            <p className="text-gray-500 text-center py-4">
+            <p className="text-gray-500 dark:text-gray-400 text-center py-4">
               No foods logged yet. Start tracking!
             </p>
           ) : (
@@ -133,14 +133,14 @@ export function BabyProfilePage() {
                 return (
                   <div
                     key={log.id}
-                    className="flex items-center justify-between py-2 border-b border-sage-50 last:border-0"
+                    className="flex items-center justify-between py-2 border-b border-sage-50 dark:border-gray-700 last:border-0"
                   >
                     <div>
-                      <span className="font-medium">
+                      <span className="font-medium text-charcoal dark:text-white">
                         {food?.name || log.customFoodName}
                       </span>
                       {log.isFirstTime && (
-                        <span className="ml-2 text-xs bg-coral-100 text-coral-600 px-2 py-0.5 rounded-full">
+                        <span className="ml-2 text-xs bg-coral-100 dark:bg-coral-900/50 text-coral-600 dark:text-coral-400 px-2 py-0.5 rounded-full">
                           First!
                         </span>
                       )}
