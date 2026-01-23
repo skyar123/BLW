@@ -64,7 +64,7 @@ export function Dashboard() {
           <div className="max-w-lg mx-auto flex items-center justify-between">
             <div>
               <h1 className="text-2xl font-bold">First Bites</h1>
-              <p className="text-sage-100 text-sm">{family?.name}</p>
+              <p className="text-sage-100 text-sm">{family?.name} <span className="opacity-60">• v1.2.0</span></p>
             </div>
             <Link
               to="/settings/family"
@@ -112,7 +112,7 @@ export function Dashboard() {
           <div className="flex items-center justify-between mb-2">
             <div>
               <h1 className="text-2xl font-bold">First Bites</h1>
-              <p className="text-sage-100 text-sm">{family?.name}</p>
+              <p className="text-sage-100 text-sm">{family?.name} <span className="opacity-60">• v1.2.0</span></p>
             </div>
             <div className="flex items-center gap-2">
               <ThemeToggle />
