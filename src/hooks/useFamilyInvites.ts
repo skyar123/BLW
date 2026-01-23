@@ -14,6 +14,7 @@ import {
 import { db } from '../lib/firebase';
 import { useFamily } from './useFamily';
 import { useAuth } from '../context/AuthContext';
+import { sendInviteEmail, isEmailConfigured } from '../services/emailService';
 
 export interface FamilyInvite {
   id: string;
@@ -36,7 +37,7 @@ function generateInviteCode(): string {
 }
 
 export function useFamilyInvites() {
-  const { familyId } = useFamily();
+  const { familyId, family } = useFamily();
   const { user } = useAuth();
   const [invites, setInvites] = useState<FamilyInvite[]>([]);
   const [loading, setLoading] = useState(true);
@@ -117,17 +118,37 @@ export function useFamilyInvites() {
 
       try {
         await addDoc(invitesRef, inviteData);
-        // In a real app, you'd send an email here via Firebase Functions or similar
-        return {
-          success: true,
-          message: `Invite sent to ${email}. Share code: ${code}`,
-        };
+
+        // Try to send email via EmailJS
+        const appUrl = window.location.origin;
+        const emailSent = await sendInviteEmail({
+          to_email: email.toLowerCase(),
+          invite_code: code,
+          family_name: family?.name || 'Your Family',
+          sender_name: user.displayName || user.email || 'A family member',
+          app_url: appUrl,
+        });
+
+        if (emailSent) {
+          return {
+            success: true,
+            message: `Invite email sent to ${email}!`,
+          };
+        } else {
+          // Email not configured or failed - show the code for manual sharing
+          return {
+            success: true,
+            message: isEmailConfigured()
+              ? `Invite created but email failed. Share code manually: ${code}`
+              : `Invite created! Share this code with ${email}: ${code}`,
+          };
+        }
       } catch (err) {
         console.error('Error sending invite:', err);
         return { success: false, message: 'Failed to send invite' };
       }
     },
-    [familyId, user, invites]
+    [familyId, user, invites, family]
   );
 
   const resendInvite = useCallback(
@@ -153,17 +174,36 @@ export function useFamilyInvites() {
           expiresAt: Timestamp.fromDate(expiresAt),
           resentCount: (invite.resentCount || 0) + 1,
         });
-        // In a real app, you'd send an email here
-        return {
-          success: true,
-          message: `Invite resent to ${invite.email}. New code: ${newCode}`,
-        };
+
+        // Try to send email via EmailJS
+        const appUrl = window.location.origin;
+        const emailSent = await sendInviteEmail({
+          to_email: invite.email,
+          invite_code: newCode,
+          family_name: family?.name || 'Your Family',
+          sender_name: user?.displayName || user?.email || 'A family member',
+          app_url: appUrl,
+        });
+
+        if (emailSent) {
+          return {
+            success: true,
+            message: `Invite email resent to ${invite.email}!`,
+          };
+        } else {
+          return {
+            success: true,
+            message: isEmailConfigured()
+              ? `Invite updated but email failed. New code: ${newCode}`
+              : `Invite updated! Share this code with ${invite.email}: ${newCode}`,
+          };
+        }
       } catch (err) {
         console.error('Error resending invite:', err);
         return { success: false, message: 'Failed to resend invite' };
       }
     },
-    [familyId, invites]
+    [familyId, invites, family, user]
   );
 
   const cancelInvite = useCallback(
